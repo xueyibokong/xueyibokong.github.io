@@ -1,5 +1,5 @@
 ---
-title: Github Pages + hexo 建博客
+title: 前端基础知识点整理
 date: 2018-05-25 10:30:12
 tags: 
 	- 前端知识点
