@@ -81,13 +81,13 @@
 <meta name="description" content="随笔记录">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ZJ">
+<meta property="og:title" content="ZJ的咖啡屋">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="ZJ">
+<meta property="og:site_name" content="ZJ的咖啡屋">
 <meta property="og:description" content="随笔记录">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZJ">
+<meta name="twitter:title" content="ZJ的咖啡屋">
 <meta name="twitter:description" content="随笔记录">
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <title>ZJ</title>
+  <title>ZJ的咖啡屋</title>
   
 
 
@@ -155,7 +155,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">ZJ</span>
+        <span class="site-title">ZJ的咖啡屋</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -206,6 +206,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
           </a>
         </li>
       
@@ -289,13 +299,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/HexoAndGithubPages/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xueyibokong">
+      <meta itemprop="name" content="书圣">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZJ">
+      <meta itemprop="name" content="ZJ的咖啡屋">
     </span>
 
     
@@ -328,6 +338,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -357,29 +389,165 @@
       
         
           
-            <h1 id="GitHub-Pages-Hexo-To-My-Blog"><a href="#GitHub-Pages-Hexo-To-My-Blog" class="headerlink" title="GitHub Pages + Hexo To My Blog"></a>GitHub Pages + Hexo To My Blog</h1><h2 id="xueyibokong-github-io"><a href="#xueyibokong-github-io" class="headerlink" title="xueyibokong.github.io"></a>xueyibokong.github.io</h2><p>我自己的github仓库</p>
-<h2 id="Hexo-remote是Hexo-For-xueyibokong-github-io-Hexo-文档"><a href="#Hexo-remote是Hexo-For-xueyibokong-github-io-Hexo-文档" class="headerlink" title="Hexo [remote是Hexo For xueyibokong.github.io] Hexo 文档"></a>Hexo [remote是Hexo For xueyibokong.github.io] <a href="https://hexo.io/zh-cn/docs" target="_blank" rel="noopener">Hexo 文档</a></h2><p>blog建站工具<br>通过配置 <code>_config.yml</code> 的 <code>Deployment</code> 来关联 <code>xueyibokong.github.io</code></p>
-<h2 id="目录分析"><a href="#目录分析" class="headerlink" title="目录分析"></a>目录分析</h2><h4 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a><code>_config.yml</code></h4><p>全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。这个文件下面会做较为详细的介绍。</p>
-<h4 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h4><p>scaffolds是“脚手架”的意思，当你新建一篇文章（hexo new ‘title’）的时候，hexo是根据这个目录下的文件进行构建的。基本不用关心。</p>
-<h4 id="source"><a href="#source" class="headerlink" title="source"></a>source</h4><p>这个目录很重要，新建的文章都是在保存在这个目录下的._posts 。需要新建的博文都放在 _posts 目录下。<br>_posts 目录下是一个个 markdown 文件。你应该可以看到一个 hello-world.md 的文件，文章就在这个文件中编辑。<br>_posts 目录下的md文件，会被编译成html文件，放到 public 文件夹下。</p>
-<h4 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h4><p>网站主题目录，hexo有非常好的主题拓展，支持的主题也很丰富。该目录下，每一个子目录就是一个主题。</p>
-<h2 id="管理"><a href="#管理" class="headerlink" title="管理"></a>管理</h2><h2 id="文章多点发布-amp-同步"><a href="#文章多点发布-amp-同步" class="headerlink" title="文章多点发布 &amp; 同步"></a>文章多点发布 &amp; 同步</h2><h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><h4 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h4><p>文章默认创建在source/_post目录下，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &quot;My New Post&quot;</span><br></pre></td></tr></table></figure></p>
-<p>创建文章的<code>.md</code>文件会在头部生成文章基本信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: test hexo</span><br><span class="line">date: 2018-05-25 10:30:12</span><br><span class="line">tags: </span><br><span class="line">	- q</span><br><span class="line">	- w</span><br><span class="line">type:	</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p><code>title</code> 文章标题<br><code>date</code>  时间<br><code>tags</code>  文章标签<br><code>type</code>  文章类型</p>
-</blockquote>
-<h4 id="Run-server-查看效果"><a href="#Run-server-查看效果" class="headerlink" title="Run server [查看效果]"></a>Run server [查看效果]</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">or</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-<h4 id="构建静态文件"><a href="#构建静态文件" class="headerlink" title="构建静态文件"></a>构建静态文件</h4><p>初始化静态文件，也就是将source/_post目录下<code>.md</code>的文章构建到public目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate </span><br><span class="line">or</span><br><span class="line">$ hexo g</span><br><span class="line">or </span><br><span class="line">$ hexo server -p 端口号</span><br></pre></td></tr></table></figure></p>
-<h4 id="推送到-username-github-io"><a href="#推送到-username-github-io" class="headerlink" title="推送到 username.github.io"></a>推送到 username.github.io</h4><p>将public目录下的静态web推送到<code>username.github.io</code>仓库下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h3 id="换点发布"><a href="#换点发布" class="headerlink" title="换点发布"></a>换点发布</h3><h4 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h4><p>换一台电脑发布文章。</p>
-<h4 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h4><p>1、将hexo项目保存到 username.github.io项目的hexo分支上。<br>2、将hexo分支设为default分支，便于clone和提交。</p>
-<h2 id="主题应用"><a href="#主题应用" class="headerlink" title="主题应用"></a>主题应用</h2><p>在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置有主题作者提供，主要用于配置主题相关的选项。<br>为了描述方便，在以下说明中，将前者称为 站点配置文件， 后者称为 主题配置文件。</p>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone [主题仓库地址] themes/[主题名]</span><br></pre></td></tr></table></figure>
-<h3 id="启动主题"><a href="#启动主题" class="headerlink" title="启动主题"></a>启动主题</h3><p>修改根目录下的<code>_config.yml</code>的<code>theme</code>配置项<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme : [主题名]</span><br></pre></td></tr></table></figure></p>
-<h3 id="本地验证"><a href="#本地验证" class="headerlink" title="本地验证"></a>本地验证</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-<h3 id="推送到线上生效"><a href="#推送到线上生效" class="headerlink" title="推送到线上生效"></a>推送到线上生效</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+          GitHub Pages + Hexo To My Blogxueyibokong.github.io我自己的github仓库
+Hexo [remote是Hexo For xueyibokong.github.io] Hexo 文档blog建站工具通过配置 _config.yml 的 Deploym
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/25/HexoAndGithubPages/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/FEPunktyWiedzy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="书圣">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZJ的咖啡屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/25/FEPunktyWiedzy/" itemprop="url">Github Pages + hexo 建博客</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-25T10:30:12+08:00">
+                2018-05-25
+              </time>
+            
+
+            
+
+            
+          </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          前端面试题一、布局题模态窗布局要求：遮罩满屏、内容部分垂直水平居中且不定宽高，请写出标签及样式。进阶要求：内容容器内文案较少时（一行）居中对齐，较多时（多行换行）居左对齐。以上要求不得有js参与。
+dom1234567891011&lt;div class=&quot;mask&quot;&gt;	
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/25/FEPunktyWiedzy/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -448,7 +616,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">xueyibokong</p>
+              <p class="site-author-name" itemprop="name">书圣</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -459,12 +627,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
             
 
             
@@ -472,7 +649,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -529,7 +706,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">xueyibokong</span>
+  <span class="author" itemprop="copyrightHolder">书圣</span>
 
   
 </div>

@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+
+  <meta name="keywords" content="前端知识点,整理," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前端面试题一、布局题模态窗布局要求：遮罩满屏、内容部分垂直水平居中且不定宽高，请写出标签及样式。进阶要求：内容容器内文案较少时（一行）居中对齐，较多时（多行换行）居左对齐。以上要求不得有js参与。 dom1234567891011&amp;lt;div class=&amp;quot;mask&amp;quot;&amp;gt;	&amp;lt;div class=&amp;quot;modal-box&amp;quot;&amp;gt;		...		&amp;lt;">
+<meta name="keywords" content="前端知识点,整理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github Pages + hexo 建博客">
+<meta property="og:url" content="http://yoursite.com/2018/05/25/FEPunktyWiedzy/index.html">
+<meta property="og:site_name" content="ZJ的咖啡屋">
+<meta property="og:description" content="前端面试题一、布局题模态窗布局要求：遮罩满屏、内容部分垂直水平居中且不定宽高，请写出标签及样式。进阶要求：内容容器内文案较少时（一行）居中对齐，较多时（多行换行）居左对齐。以上要求不得有js参与。 dom1234567891011&amp;lt;div class=&amp;quot;mask&amp;quot;&amp;gt;	&amp;lt;div class=&amp;quot;modal-box&amp;quot;&amp;gt;		...		&amp;lt;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://pic1.zhimg.com/e83bca5f1d1e6bf359d1f75727968c11_r.jpg">
+<meta property="og:updated_time" content="2018-05-25T15:51:25.312Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Github Pages + hexo 建博客">
+<meta name="twitter:description" content="前端面试题一、布局题模态窗布局要求：遮罩满屏、内容部分垂直水平居中且不定宽高，请写出标签及样式。进阶要求：内容容器内文案较少时（一行）居中对齐，较多时（多行换行）居左对齐。以上要求不得有js参与。 dom1234567891011&amp;lt;div class=&amp;quot;mask&amp;quot;&amp;gt;	&amp;lt;div class=&amp;quot;modal-box&amp;quot;&amp;gt;		...		&amp;lt;">
+<meta name="twitter:image" content="https://pic1.zhimg.com/e83bca5f1d1e6bf359d1f75727968c11_r.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/25/FEPunktyWiedzy/"/>
+
+
+
+
+
+  <title>Github Pages + hexo 建博客 | ZJ的咖啡屋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZJ的咖啡屋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">少小多才学，平生志气高。别人怀宝剑，我有笔如刀。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/FEPunktyWiedzy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="书圣">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZJ的咖啡屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Github Pages + hexo 建博客</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-25T10:30:12+08:00">
+                2018-05-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前端面试题"><a href="#前端面试题" class="headerlink" title="前端面试题"></a>前端面试题</h1><h3 id="一、布局题"><a href="#一、布局题" class="headerlink" title="一、布局题"></a>一、布局题</h3><p><code>模态窗布局</code>要求：遮罩满屏、内容部分垂直水平居中且不定宽高，请写出标签及样式。进阶要求：内容容器内文案较少时（一行）居中对齐，较多时（多行换行）居左对齐。以上要求不得有js参与。</p>
+<h4 id="dom"><a href="#dom" class="headerlink" title="dom"></a>dom</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;mask&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;modal-box&quot;&gt;</span><br><span class="line">		...</span><br><span class="line">		&lt;div class=&quot;modal-box-body&quot;&gt;</span><br><span class="line">			&lt;div class=&quot;center-body&quot;&gt;</span><br><span class="line">				测试文案...</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		...</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="样式一："><a href="#样式一：" class="headerlink" title="样式一："></a>样式一：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//绝对定位 + transform</span><br><span class="line">.mask&#123;</span><br><span class="line">	position:fixed;</span><br><span class="line">	top:0;bottom:0;left:0;right:0;</span><br><span class="line">&#125;</span><br><span class="line">.modal-box&#123;</span><br><span class="line">	position:absolute;</span><br><span class="line">	top:50%;left:50%;</span><br><span class="line">	transform:translate(-50%,-50%);</span><br><span class="line">&#125;</span><br><span class="line">解释：</span><br></pre></td></tr></table></figure>
+<h4 id="样式二："><a href="#样式二：" class="headerlink" title="样式二："></a>样式二：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//操作行内块级元素</span><br><span class="line">html,body&#123;</span><br><span class="line">        width:100%;</span><br><span class="line">        height:100%;</span><br><span class="line">    &#125;</span><br><span class="line">    .mask&#123;</span><br><span class="line">        width:100%;</span><br><span class="line">        height:100%;</span><br><span class="line">       text-align: center        </span><br><span class="line">    &#125;</span><br><span class="line">    .mask:after&#123;</span><br><span class="line">        content:&quot;&quot;;</span><br><span class="line">        display:inline-block;</span><br><span class="line">        height:100%;</span><br><span class="line">        width:0;</span><br><span class="line">        vertical-align:middle;</span><br><span class="line">    &#125;</span><br><span class="line">    .modal-box&#123;</span><br><span class="line">        display:inline-block;</span><br><span class="line">        margin:0 auto;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="样式三："><a href="#样式三：" class="headerlink" title="样式三："></a>样式三：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//flex布局（主要是实现垂直居中）</span><br><span class="line">.mask&#123;</span><br><span class="line">        position:fixed;</span><br><span class="line">        top:0;bottom:0;left:0;right:0;</span><br><span class="line">       display: flex;</span><br><span class="line">       align-items:center;</span><br><span class="line">       justify-content: center;</span><br><span class="line">    &#125;</span><br><span class="line">    .modal-box&#123;</span><br><span class="line">        flex: 1;</span><br><span class="line">       max-width: 80%;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="进阶要求答案"><a href="#进阶要求答案" class="headerlink" title="进阶要求答案"></a>进阶要求答案</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.modal-box-body&#123;</span><br><span class="line">	text-align:center;</span><br><span class="line">&#125;</span><br><span class="line">.center-body&#123;</span><br><span class="line">	display:inline-block;</span><br><span class="line">	text-align:left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>自适应布局</code> 要求：左边固定宽，右边自适应。以上要求有js参与。</p>
+<h4 id="dom-1"><a href="#dom-1" class="headerlink" title="dom"></a>dom</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;box&quot;&gt;</span><br><span class="line">       &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">       &lt;div class=&quot;right&quot;&gt;</span><br><span class="line">           ...</span><br><span class="line">       &lt;/div&gt;</span><br><span class="line">   &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="样式一"><a href="#样式一" class="headerlink" title="样式一"></a>样式一</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//定位 + padding-left</span><br><span class="line">.box&#123;</span><br><span class="line">       position: relative;</span><br><span class="line">       height: 35px;</span><br><span class="line">   &#125;</span><br><span class="line">   .box&gt;div&#123;</span><br><span class="line">       height: 100%;</span><br><span class="line">   &#125;</span><br><span class="line">   .left&#123;</span><br><span class="line">       position: absolute;</span><br><span class="line">       width: 120px;</span><br><span class="line">       background: red;</span><br><span class="line">   &#125;</span><br><span class="line">   .right&#123;</span><br><span class="line">       width: 100%;</span><br><span class="line">       padding-left: 120px;</span><br><span class="line">       background: greenyellow;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="样式二"><a href="#样式二" class="headerlink" title="样式二"></a>样式二</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//flex 布局，左边定宽，右边弹性填充</span><br><span class="line">.box&#123;</span><br><span class="line">       display: flex;</span><br><span class="line">       height: 35px;</span><br><span class="line">   &#125;</span><br><span class="line">   .box&gt;div&#123;</span><br><span class="line">       height: 100%;</span><br><span class="line">   &#125;</span><br><span class="line">   .left&#123;</span><br><span class="line">       width: 120px;</span><br><span class="line">       background: red;</span><br><span class="line">   &#125;</span><br><span class="line">   .right&#123;</span><br><span class="line">       flex: 1;</span><br><span class="line">       background: greenyellow;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="样式三"><a href="#样式三" class="headerlink" title="样式三"></a>样式三</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//table 布局</span><br><span class="line">.box&#123;</span><br><span class="line">       display: table;</span><br><span class="line">       width: 100%;</span><br><span class="line">       height: 35px;</span><br><span class="line">   &#125;</span><br><span class="line">   .box&gt;div&#123;</span><br><span class="line">       display: table-cell;</span><br><span class="line">       height: 100%;</span><br><span class="line">   &#125;</span><br><span class="line">   .left&#123;</span><br><span class="line">       width: 120px;</span><br><span class="line">       background: red;</span><br><span class="line">   &#125;</span><br><span class="line">   .right&#123;</span><br><span class="line">       background: greenyellow;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="float方案"><a href="#float方案" class="headerlink" title="float方案"></a>float方案</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">//布局</span><br><span class="line">&lt;div class=&quot;box&quot;&gt;</span><br><span class="line"> 		&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">  	&lt;div class=&quot;right&quot;&gt;</span><br><span class="line">   		...</span><br><span class="line">  	&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">//样式</span><br><span class="line">.box&#123;</span><br><span class="line">   height: 35px;</span><br><span class="line">&#125;</span><br><span class="line">.box&gt;div&#123;</span><br><span class="line">   height: 100%;</span><br><span class="line">&#125;</span><br><span class="line">.left&#123;</span><br><span class="line">   float:left;</span><br><span class="line">   width: 120px;</span><br><span class="line">   background: red;</span><br><span class="line">&#125;</span><br><span class="line">.right&#123;</span><br><span class="line">	//不能给100%宽度，会超出父元素出现滚动条</span><br><span class="line">	padding-left:120px;//必须给padding-left值，如果没有则只有子行内元素会被前兄弟节点挤到右面</span><br><span class="line">   background: greenyellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css-BFC、IFC、GFC、FFC"><a href="#css-BFC、IFC、GFC、FFC" class="headerlink" title="css BFC、IFC、GFC、FFC"></a>css BFC、IFC、GFC、FFC</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">BFC（block fomatting context）是web布局的块级元素格式化上下文。</span><br><span class="line">BFC布局规则：</span><br><span class="line">.	内部的Box会在垂直方向，一个接一个地放置。</span><br><span class="line">.	Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠</span><br><span class="line">.	每个元素的margin box的左边， 与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。</span><br><span class="line">.	BFC的区域不会与float box重叠。</span><br><span class="line">.	BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。</span><br><span class="line">.	计算BFC的高度时，浮动元素也参与计算</span><br><span class="line">以下方式可以创BFC</span><br><span class="line">.	根元素</span><br><span class="line">.	float属性不为none；float本身会对上下文影响，但是其子节点对其外部不会有影响</span><br><span class="line">.	position为absolute或fixed</span><br><span class="line">.	display为inline-block, table-cell, table-caption, flex, inline-flex</span><br><span class="line">.	overflow不为visible</span><br><span class="line">举例：</span><br><span class="line">	`自适应两栏布局`</span><br><span class="line">    .aside &#123;</span><br><span class="line">        float: left;//生成NFC</span><br><span class="line">        background: #f66;</span><br><span class="line">    &#125;</span><br><span class="line">    .main &#123;</span><br><span class="line">        overflow:hiddle;//生成NFC</span><br><span class="line">        background: #fcc;</span><br><span class="line">    &#125;</span><br><span class="line">    &lt;div class=&quot;aside&quot;&gt;asfsdf&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;1234242&lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">`overflow:hiddle清除浮动`</span><br><span class="line">	利用了BFC包裹的特性，计算内部高度并且不影响包裹快外部元素，所以可以解决浮动导致包裹节点的塌陷问题。</span><br><span class="line">`利用NFC的margin边界接触规则解决内部元素margin包裹元素的位置影响`</span><br><span class="line">	&lt;div class=&quot;body&quot;&gt;</span><br><span class="line">	  &lt;div&gt;</span><br><span class="line">	    asdf</span><br><span class="line">	  &lt;/div&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	.body&#123;</span><br><span class="line">	  background:blue;</span><br><span class="line">	  overflow:hidden; //生成nfc，效果 === float:left;</span><br><span class="line">	&#125;</span><br><span class="line">	.body&gt;div&#123;</span><br><span class="line">	  border:1px solid red;</span><br><span class="line">	  margin-top:30px;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">IFC (inline formatting context)是web布局的内联元素格式化上下文。</span><br><span class="line">	IFC用来包裹内联元素，其高度为内联元素最高所决定，给IFC设置text-align:center;</span><br><span class="line">会使其内部元素水平居中。</span><br><span class="line">	把IFC中最高元素基线设置为vertical-align:middle能使IFC内部元素垂直居中。</span><br><span class="line"></span><br><span class="line">GFC (GridLayout Formatting Contexts) 网格布局格式化上下文 display:grid</span><br><span class="line"></span><br><span class="line">FFC (Flex Formatting Contexts)自适应格式化上下文 display:flex</span><br></pre></td></tr></table></figure>
+<h3 id="用dom节点绘制一个微信logo"><a href="#用dom节点绘制一个微信logo" class="headerlink" title="用dom节点绘制一个微信logo"></a>用dom节点绘制一个微信logo</h3><p><code>css 绘制icon</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wx-logo&quot;&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;span&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;span&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.wx-logo&#123;</span><br><span class="line">  font-size:20px;</span><br><span class="line">  width:10em;</span><br><span class="line">  height:10em;</span><br><span class="line">  border:1px solid red;</span><br><span class="line">  margin:30px;</span><br><span class="line">  padding:1em .7em;</span><br><span class="line">  box-sizing:border-box;</span><br><span class="line">&#125;</span><br><span class="line">.wx-logo&gt;div:nth-of-type(1)&#123;</span><br><span class="line">  background:linear-gradient(#98ea61,#78b94c);</span><br><span class="line">  width:7.5em;</span><br><span class="line">  height: 6em;</span><br><span class="line">  border-radius:50%;</span><br><span class="line">&#125;</span><br><span class="line">.wx-logo&gt;div:nth-of-type(2)&#123;</span><br><span class="line">  background:linear-gradient(#f2f2fa,#c3c3c3);</span><br><span class="line">  width:5.8em;</span><br><span class="line">  height: 4.4em;</span><br><span class="line">  border-radius:50%;</span><br><span class="line">  transform:translate(50%,-77%);</span><br><span class="line">&#125;</span><br><span class="line">.wx-logo&gt;div&#123;</span><br><span class="line">  position:relative;</span><br><span class="line">&#125;</span><br><span class="line">.wx-logo&gt;div&gt;span&#123;</span><br><span class="line">  position:absolute;</span><br><span class="line">&#125;</span><br><span class="line">.wx-logo&gt;div:nth-of-type(1)&gt;span&#123;</span><br><span class="line">  left:15%;</span><br><span class="line">  top:calc(100% - 0.67em);</span><br><span class="line">  transform:rotate(40deg);</span><br><span class="line">  border-top:1em solid #78b94c;</span><br><span class="line">  border-left:0.3em solid transparent;</span><br><span class="line">  border-right:0.3em solid  transparent;</span><br><span class="line">  border-bottom:0 solid transparent;</span><br><span class="line">&#125;</span><br><span class="line">.wx-logo&gt;div:nth-of-type(2)&gt;span&#123;</span><br><span class="line">  right:15%;</span><br><span class="line">  top:calc(100% - 0.6em);</span><br><span class="line">  transform:rotate(-40deg);</span><br><span class="line">  border-top:1em solid #c3c3c3;</span><br><span class="line">  border-left:0.3em solid transparent;</span><br><span class="line">  border-right:0.3em solid  transparent;</span><br><span class="line">  border-bottom:0 solid transparent;</span><br><span class="line">&#125;</span><br><span class="line">.wx-logo&gt;div:nth-of-type(1):before&#123;</span><br><span class="line">  content:&apos;&apos;;</span><br><span class="line">  display:block;</span><br><span class="line">  width:0.7em;</span><br><span class="line">  height:0.7em;</span><br><span class="line">  border-radius:50%;</span><br><span class="line">  background:#447921;</span><br><span class="line">  transform:translate(2.1em,1.5em);</span><br><span class="line">&#125;</span><br><span class="line">.wx-logo&gt;div:nth-of-type(1):after&#123;</span><br><span class="line">  content:&apos;&apos;;</span><br><span class="line">  display:block;</span><br><span class="line">  width:0.7em;</span><br><span class="line">  height:0.7em;</span><br><span class="line">  border-radius:50%;</span><br><span class="line">  background:#447921;</span><br><span class="line">  transform:translate(4.7em,0.73em);</span><br><span class="line">&#125;</span><br><span class="line">.wx-logo&gt;div:nth-of-type(2):before&#123;</span><br><span class="line">  content:&apos;&apos;;</span><br><span class="line">  display:block;</span><br><span class="line">  width:0.56em;</span><br><span class="line">  height:0.56em;</span><br><span class="line">  border-radius:50%;</span><br><span class="line">  background:#888888;</span><br><span class="line">  transform:translate(1.6em,1.3em);</span><br><span class="line">&#125;</span><br><span class="line">.wx-logo&gt;div:nth-of-type(2):after&#123;</span><br><span class="line">  content:&apos;&apos;;</span><br><span class="line">  display:block;</span><br><span class="line">  width:0.56em;</span><br><span class="line">  height:0.56em;</span><br><span class="line">  border-radius:50%;</span><br><span class="line">  background:#888888;</span><br><span class="line">  transform:translate(3.5em,0.7em);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">强制转换：</span><br><span class="line">转换为数值类型：Number(mix)、parseInt(string,radix)、parseFloat(string)</span><br><span class="line">转换为字符串类型：toString(radix)、String(mix)</span><br><span class="line">转换为布尔类型：Boolean(mix)</span><br><span class="line"></span><br><span class="line">Boolean(&apos;&apos;) //false</span><br><span class="line">Boolean(0);	//false</span><br><span class="line">Boolean(NaN); //false</span><br><span class="line">Boolean(undefined) //false</span><br><span class="line">Boolean(null) //false</span><br><span class="line">Boolean([])	//true</span><br><span class="line">Boolean([].valueOf())//true</span><br><span class="line">Boolean([].toString()) //false</span><br><span class="line"></span><br><span class="line">隐式转换：</span><br><span class="line">++ -- - / * - 逻辑运算符 关系操作符（==）</span><br><span class="line"></span><br><span class="line">[] == []</span><br><span class="line">//false</span><br><span class="line">false == []</span><br><span class="line">//true</span><br><span class="line">[] == false</span><br><span class="line">//true</span><br><span class="line">&#123;&#125; == &#123;&#125;</span><br><span class="line">//false</span><br></pre></td></tr></table></figure>
+<h3 id="数据的浅拷贝和深拷贝，数据深拷贝的由来以及实现方式"><a href="#数据的浅拷贝和深拷贝，数据深拷贝的由来以及实现方式" class="headerlink" title="数据的浅拷贝和深拷贝，数据深拷贝的由来以及实现方式"></a>数据的浅拷贝和深拷贝，数据深拷贝的由来以及实现方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">深拷贝是针对于引用数据类型的，由于引用数据类型会将数据本身存储到堆中，将指针（指向堆里数据的地址）存在栈内。浅拷贝可实现不同指针指向同一数据，并不能将数据本身复制，而深拷贝会在内存中开辟新空间来实现数据和指针的全部复制。</span><br><span class="line">浅拷贝的方式有赋值，传参等。</span><br><span class="line">深拷贝的方法有：</span><br><span class="line">1、JSON.stringify()/JSON.parse();</span><br><span class="line">2、对于一位json可以有现成的api比如array的slice、concat等，凡是可以生成新json的api都可以。</span><br><span class="line">3、对多维json进行遍历加递归，判断条件为基本数据类型后结束递归并赋值。</span><br><span class="line"></span><br><span class="line">`应用`</span><br><span class="line">深拷贝和浅拷贝在开发中需应用得当。</span><br><span class="line">浅拷贝可以节省内存开销，并使一组数据在多端程序操作后保持同步，函数传参常用。</span><br><span class="line">深拷贝会耗费一定内存，但是在特定的情景下是必要的，比如封装开发，对初始化数据进行【备份】等。</span><br></pre></td></tr></table></figure>
+<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">`browser`</span><br><span class="line">console.log(this === window)//true</span><br><span class="line">`node`</span><br><span class="line">console.log(this === global)//true</span><br><span class="line"></span><br><span class="line">this指的是，调用函数的那个对象。</span><br><span class="line">call、apply会改变this的指向</span><br></pre></td></tr></table></figure>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p><code>构造函数</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function _A ()&#123;</span><br><span class="line">	this.name = &apos;A&apos;;</span><br><span class="line">	this.arr = [1,2,3]</span><br><span class="line">&#125;</span><br><span class="line">_A.prototype.o = &#123;&apos;o&apos;:&apos;oo&apos;&#125;</span><br><span class="line">var A = new _A();</span><br><span class="line">A.name;//A</span><br><span class="line">var B = new _A()</span><br><span class="line">B.name;//A</span><br><span class="line">A.name === B.name;//true</span><br><span class="line">A.arr === B.Arr;//false</span><br><span class="line">A.o === B.o; //true 注意：通过构造函数new出来的对象，继承其构造函数的原型</span><br></pre></td></tr></table></figure></p>
+<p><code>call、apply</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function _people()&#123;</span><br><span class="line">	this.body = &#123;</span><br><span class="line">		head : &apos;one&apos;,</span><br><span class="line">		hands: &apos;tow&apos;,</span><br><span class="line">		foots : &apos;tow&apos;</span><br><span class="line">	&#125;</span><br><span class="line">	this.ability = &#123;</span><br><span class="line">		language : true,</span><br><span class="line">		fly : false</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">_people.prototype.getTheNmae = function()&#123;</span><br><span class="line">	return this.theName</span><br><span class="line">&#125;</span><br><span class="line">function _man ()&#123;</span><br><span class="line">	_people.call(this)</span><br><span class="line">&#125;</span><br><span class="line">var people = new _people();</span><br><span class="line">var zhangsan = new _man();</span><br><span class="line">zhangsan.body;//&#123;head: &quot;one&quot;, hands: &quot;tow&quot;, foots: &quot;tow&quot;&#125;</span><br><span class="line">zhangsan.body === people1.body//false</span><br><span class="line">zhangsan.theNmae = &apos;张三&apos;</span><br><span class="line">zhangsan.getTheName; //undefined 注意：call、apply造成的继承是不会继承父类的原型</span><br></pre></td></tr></table></figure></p>
+<p><code>原型继承</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function _A()&#123;</span><br><span class="line">	this.obj = &#123;&quot;a&quot;:&quot;aa&quot;&#125;</span><br><span class="line">&#125;</span><br><span class="line">_A.prototype.arr = [1,2,3];</span><br><span class="line"></span><br><span class="line">var A = new _A();</span><br><span class="line">var B = new _A();</span><br><span class="line">A.arr;//[1,2,3]</span><br><span class="line">A.arr === B.arr;//true</span><br><span class="line">A.obj === B.obj//false</span><br></pre></td></tr></table></figure></p>
+<p><code>原型链继承</code><br><img src="https://pic1.zhimg.com/e83bca5f1d1e6bf359d1f75727968c11_r.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">`关系如上图：`</span><br><span class="line"></span><br><span class="line">`范式如下：`</span><br><span class="line">function _a()&#123;</span><br><span class="line">	this.name = &apos;a&apos;</span><br><span class="line">	this.num = [1,2,3]</span><br><span class="line">&#125;</span><br><span class="line">_a.prototype.getNum = function()&#123;</span><br><span class="line">	return this.num</span><br><span class="line">&#125;</span><br><span class="line">_a.prototype.getName = function()&#123;</span><br><span class="line">	return this.name</span><br><span class="line">&#125;</span><br><span class="line">function _b()&#123;</span><br><span class="line">	this.name = &apos;b&apos;</span><br><span class="line">&#125;</span><br><span class="line">_b.prototype = new _a()</span><br><span class="line">_b.prototype.constructor = _b;</span><br><span class="line">var b = new _b();</span><br><span class="line">b.getNum();//[1,2,3]	 </span><br><span class="line">b.getName();//&apos;b&apos; 注意：对象读取属性依据继承链向上读取</span><br><span class="line"></span><br><span class="line">`__ptoto__`</span><br><span class="line">1.对象有属性__proto__,指向该对象的构造函数的原型对象。</span><br><span class="line">2.方法除了有属性__proto__,还有属性prototype，prototype指向该方法的原型对象。</span><br><span class="line"></span><br><span class="line">`用途`</span><br><span class="line">实现继承的主要方法</span><br><span class="line">常用于以基类、二级类、...方式开发js工具库、游戏。</span><br></pre></td></tr></table></figure></p>
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function addFn()&#123;</span><br><span class="line">	var z = 0</span><br><span class="line">	return function _()&#123;</span><br><span class="line">		console.log(z++)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">var add = addFn();</span><br><span class="line">add()//0</span><br><span class="line">add()//1</span><br><span class="line">add()//2</span><br><span class="line">add()//3</span><br><span class="line"></span><br><span class="line">注解：将‘addFn’执行后赋值给’add‘字面量，‘add’接收到返回的‘_’,&apos;_&apos;内部引用‘addFn’作用域中的变量，由于’add‘未销毁，所以&apos;_&apos;与‘addFn’的上下文关系就未被销毁。add()便是‘addFn’作用域里的‘z’，实现了内部变量外部访问</span><br></pre></td></tr></table></figure>
+<h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">transition（过度）（css实现）</span><br><span class="line">animation （动画）（css实现）</span><br><span class="line">setInterval（定时器）（js 定时器）</span><br><span class="line">requestAmationFrame（js帧绘画）实现方式是递归执行</span><br></pre></td></tr></table></figure>
+<h3 id="什么是动画队列？动画队列有哪些方式？"><a href="#什么是动画队列？动画队列有哪些方式？" class="headerlink" title="什么是动画队列？动画队列有哪些方式？"></a>什么是动画队列？动画队列有哪些方式？</h3><p><code>动画题</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">`jquery`</span><br><span class="line">$(&apos;#box&apos;).animate(&#123;&apos;left&apos;:&apos;100px&apos;&#125;,1000).animate(&#123;&apos;width&apos;:&apos;200px&apos;&#125;,1000).animate(&#123;&apos;left&apos;:&apos;0&apos;&#125;,1000).animate(&#123;&apos;width&apos;:&apos;100px&apos;&#125;,1000);</span><br><span class="line">`原生js配合css`</span><br><span class="line">监听transitionEnd、animationEnd事件，在回调中做动画</span><br><span class="line">利用transition的等待时间，或者用animation分步动画</span><br></pre></td></tr></table></figure></p>
+<h3 id="前端存储-数据持久化"><a href="#前端存储-数据持久化" class="headerlink" title="前端存储 数据持久化"></a>前端存储 数据持久化</h3><p><code>Session Storage 会话存储</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage生命周期是永久，这意味着除非用户在浏览器提供的UI上清除或者localStorage.clear()清除，否则这些信息将永远存在。存放数据大小为一般为5MB,而且它仅在客户端（即浏览器）中保存，不参与和服务器的通信。</span><br></pre></td></tr></table></figure></p>
+<p><code>Local Storage 本地存储</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sessionStorage仅在当前会话下有效，关闭页面或浏览器后被清除。存放数据大小为一般为5MB,而且它仅在客户端（即浏览器）中保存，不参与和服务器的通信。源生接口可以接受，亦可再次封装来对Object和Array有更好的支持。</span><br></pre></td></tr></table></figure></p>
+<p><code>作用域不同</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不同浏览器无法共享localStorage或sessionStorage中的信息。相同浏览器的不同页面间可以共享相同的localStorage（页面属于相同域名和端口），但是不同页面或标签页间无法共享sessionStorage的信息。这里需要注意的是，页面及标签页仅指顶级窗口，如果一个标签页包含多个iframe标签且他们属于同源页面，那么他们之间是可以共享sessionStorage的。</span><br></pre></td></tr></table></figure></p>
+<p><code>Cookie</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	生命期为只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。 存放数据大小为4K左右 。有个数限制（各浏览器不同），一般不能超过20个。与服务器端通信：每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性能问题。但Cookie需要程序员自己封装，源生的Cookie接口不友好(http://www.jb51.net/article/6... </span><br><span class="line">)。</span><br></pre></td></tr></table></figure></p>
+<p><code>DB</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">web sql、indexDB</span><br></pre></td></tr></table></figure></p>
+<h3 id="和服务端的数据交互"><a href="#和服务端的数据交互" class="headerlink" title="和服务端的数据交互"></a>和服务端的数据交互</h3><p><code>http</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">methods : get、post、put、option、delete...</span><br><span class="line">状态码 : 200（正常）、300（重定向）、400（客户端错误）、500（服务端错误）</span><br><span class="line">http是无状态、结合cookie和session描述http会话过程： Session是怎样做到会话身份识别的呢？首先，用户端向服务端发送一个请求，服务端接收到请求后，初始化会话，生成相应的会话信息，核心是会话ID，把会话ID发送给客户端，客户端接收到这个会话ID，把它存储起来，下一次发送请求的时候，附带着这个会话ID一起发送给服务端，服务端只要根据这个会话ID，就知道是谁了。这个会话ID，就像我们的身份证号码，一直伴随终生。核心：服务端如何生成这个会话ID，客户端怎样存储这个会话ID。</span><br></pre></td></tr></table></figure></p>
+<p><code>ajax 上送数据格式</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Query String（get请求）；</span><br><span class="line">Request Payload（post请，Content-Type:text/plain;charset=UTF-8 || application/json; charset=utf-8）；</span><br><span class="line">Form Data（Content-Type:application/x-www-form-urlencoded ）</span><br></pre></td></tr></table></figure></p>
+<p><code>跨域</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">`跨域的由来`</span><br><span class="line">跨域是浏览器对不同域名下的站点间脚本数据交互的保护措施，具体表现在ajax脚本对不同域名下的服务发出的数据请求和不同站点间的通信会被跨域拦截。</span><br><span class="line"></span><br><span class="line">`jsonp 解决一级域跨域`：原理，简单实现</span><br><span class="line">原理是客户端创建script标签src请求服务端返回的一个js文件，在这个js文件中上面是要返回的json数据，下面是一个callback函数的执行并将上面的数据作为实参回传，callback函数名在客户端请求时一query string方式上传。客户端在这个js文件加载成功后编写回调具名函数，函数名为上面提到的callback。</span><br><span class="line">`cors 解决一级域跨域`: 原理，实现。</span><br><span class="line">ajax发起后requestHeader设置withCredentials和crossDomain为true，表明ajax要发起跨域请求了，在服务端返回的responseHeader中需要设置ajax脚本执行所在域的域名为信任站点，即设置res.header(&quot;Access-Control-Allow-Origin&quot;,req.headers.origin);</span><br><span class="line">`服务器代理 解决一级域跨域`</span><br><span class="line">由于跨域是浏览器对ajax做的限制，因此服务端请求服务端的数据是不存在跨域的，所以用同域下的服务求代理客户端去请求跨域的服务数据是可以的。</span><br><span class="line"></span><br><span class="line">`二级域名跨域`</span><br><span class="line">开发中时长遇到二级域名跨域的场景，比如：iframe间通信，cookie跨域共享等，这些场景多数可以通过document.domain和服务端设置cookie的cross来解决。</span><br></pre></td></tr></table></figure></p>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><p><code>dom 0级时间</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div onclick=&quot;alert(1)&quot;&gt;点击&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p><code>dom 2级事件</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">addEventListener</span><br></pre></td></tr></table></figure></p>
+<p><code>事件流</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">事件捕获、事件元、事件冒泡</span><br></pre></td></tr></table></figure></p>
+<p><code>事件对象的应用</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e.target 实现事件委派</span><br><span class="line">e.clientX,e.clientY...</span><br></pre></td></tr></table></figure></p>
+<p><code>移动端事件点透原因及处理</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">原因：移动端触屏会发生两类事件，touch和click。当情景为两个非后代继承关系的dom节点重叠，z-index高的节点挂touch事件并当事件执行后将此dom从dom树种擦除（实际便是引起dom树重绘并且此渲染位置被后者占用），另一个挂click事件时会出现点透现象。</span><br><span class="line">原理：移动端click触发会有300 ms的延迟，当上层touch执行完毕后会相继执行上层的click，发现点击的位置上是后者，便把click作用于后者上了。</span><br><span class="line">处理方案：禁止浏览器默认事件，e.preventDefault();</span><br></pre></td></tr></table></figure></p>
+<h3 id="同步异步"><a href="#同步异步" class="headerlink" title="同步异步"></a>同步异步</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">js是同步执行，但是有异步机制，定时器、计时器、ajax、promise、async函数、同异步加载等。</span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">	console.log(0)</span><br><span class="line">&#125;,100)</span><br><span class="line">console.log(1)</span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">	console.log(2)</span><br><span class="line">&#125;,0)</span><br><span class="line">for(var i = 0; i &lt; 10000; i++)&#123;</span><br><span class="line">	if(i === 9999)&#123;</span><br><span class="line">		console.log(3)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">执行结果 ：</span><br><span class="line">1</span><br><span class="line">3</span><br><span class="line">2</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="前端优化"><a href="#前端优化" class="headerlink" title="前端优化"></a>前端优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">`从用户角度`</span><br><span class="line">FEcoder在设计前端优化时首先应从用户角度看，除去UE要考虑的人机交互优化外，coder更应注重软件的稳定性，易用性、好用性、安全性等。</span><br><span class="line">稳定性：不出现操作卡顿等应用不稳定现象；</span><br><span class="line">好用性：节省流量、快速调起、快速响应等直接或间接的表现；</span><br><span class="line">美观性：不出现失真、完美还原设计图、舒适的过度动画、减少页面呈现断层感；</span><br><span class="line">安全性：软件对用户信息的保密、前后端数据交互的加密、反显脱敏、高危操作保护；</span><br><span class="line">`开发者要考虑的`</span><br><span class="line">稳定性的要求决定了开发者在软件开发过程中代码的健壮和精简，软件维护措施的时效。需要coder编写规范，控制页面数据量、减少频繁的dom操作，遵循语言机制（尽量使用最切近目标的实现方式，比如能用css的就不用js），代码要易维护。</span><br><span class="line">减少http请求、静态文件客户端缓存可以节省用户流量。</span><br><span class="line">cdn和缓存服务器可以降低后台服务器压力。</span><br><span class="line">降低首屏加载量、缓存服务支持、图片懒加载、过度的页面交互等能够让应用实现快速调起并减少断层感。</span><br><span class="line">icon矢量化，扁平化的应用可以大幅度避免图片的应用。</span><br><span class="line">事件的处理和loadingUI能提高页面快速响应，比如处理点透、事件委派。</span><br><span class="line">pc端响应式布局能提高应用在多类屏的较完美呈现，移动端dpr，postcss等的结合应用可以实现多终端较完美呈现</span><br><span class="line">前端安全性在金融类应用中较为重要，https可以实现数据安全传输，用户名密码等敏感信息可以散列（md5、sha1）后存储并对比。对前端数据采集（如：表单录入）应当提高安全防护，比如：密码键盘、脱敏录入</span><br></pre></td></tr></table></figure>
+<h3 id="前端可视化"><a href="#前端可视化" class="headerlink" title="前端可视化"></a>前端可视化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">前端可视化包括：计算机图形学（图形交互技术、真实感图形计算与显示算法、科学计算可视化、计算机动画、自然景物仿真、虚拟现实、物理现象计算等）；UE用户体验（易用、友好、美观、品牌）</span><br><span class="line">div+css、svg、webgl(canvas 2D、3D)</span><br></pre></td></tr></table></figure>
+<p><code>试用一种方案描述实现弹性小球落地效果</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">`div+css` or `svg`</span><br><span class="line">描述：利用border-radius + box-shadow等属性绘制小球，animation设置小球多次回弹动画，注意需要适当的贝瑟尔值。</span><br><span class="line">`canvas`</span><br><span class="line">描述：canvas.getContext(&apos;2d&apos;)绘制小球，利用setInterval或者requestAmationFrame函数重绘canvas实现动画，重绘算法如下：设小球质量、重力加速度、小球碰撞耗能，利用动能守恒定律计算小球在每次落地耗能后回弹最高点，再根据加速度和初速度计算出每一秒的位移。</span><br></pre></td></tr></table></figure></p>
+<h3 id="前端开发方案"><a href="#前端开发方案" class="headerlink" title="前端开发方案"></a>前端开发方案</h3><p><code>布局自适应方案</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">响应式布局（栅格化布局）、flex布局、百分比线性布局、移动端rem和组件em + flexable(原理：重设dpr，重设html的font-size)</span><br></pre></td></tr></table></figure></p>
+<p><code>工程管理</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">`脚手架`</span><br><span class="line">开发支持：实现热刷新、数据mock、语言解析、开发目录规范</span><br><span class="line">发布发布：编译、压缩、抽离、整理生成目录、替换cdn</span><br></pre></td></tr></table></figure></p>
+<p><code>本地联调</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本地联调解决的是跨域请求问题，如果已经cors的服务端返回则可以直接联调，否则需要架设代理服务进行代理请求。</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>另外多人协作开发、测试支持、上线支持等</p>
+</blockquote>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">在日常开发中，时长会遇到相同或相似的场景，然而将相同或相似的代码到处搬运无疑不是一个明智的做法，这时就需要将这些相同或者相似的代码进行抽离封装。</span><br><span class="line">封装的原则是什么？</span><br><span class="line">1、低耦合高内聚，遵循此原则可以让封装的代码降低与上下游环境的耦合，解耦能增加代码的应用场景从而提高复用性。</span><br><span class="line">2、易引用(AMD、CMD、UMD)、易调用（调用方式简单）、易配置（针对封装暴露出来的能力）</span><br><span class="line">3、易维护、易拓展。</span><br></pre></td></tr></table></figure>
+<h3 id="组件动手题"><a href="#组件动手题" class="headerlink" title="组件动手题"></a>组件动手题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(function()&#123;</span><br><span class="line">	</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端知识点/" rel="tag"># 前端知识点</a>
+          
+            <a href="/tags/整理/" rel="tag"># 整理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/25/HexoAndGithubPages/" rel="prev" title="Github Pages + hexo 建博客">
+                Github Pages + hexo 建博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">书圣</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/xueyibokong" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/zhang-jun-2-29-62/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前端面试题"><span class="nav-number">1.</span> <span class="nav-text">前端面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、布局题"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、布局题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dom"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">dom</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样式一："><span class="nav-number">1.0.1.2.</span> <span class="nav-text">样式一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样式二："><span class="nav-number">1.0.1.3.</span> <span class="nav-text">样式二：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样式三："><span class="nav-number">1.0.1.4.</span> <span class="nav-text">样式三：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进阶要求答案"><span class="nav-number">1.0.1.5.</span> <span class="nav-text">进阶要求答案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dom-1"><span class="nav-number">1.0.1.6.</span> <span class="nav-text">dom</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样式一"><span class="nav-number">1.0.1.7.</span> <span class="nav-text">样式一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样式二"><span class="nav-number">1.0.1.8.</span> <span class="nav-text">样式二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样式三"><span class="nav-number">1.0.1.9.</span> <span class="nav-text">样式三</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#float方案"><span class="nav-number">1.0.1.10.</span> <span class="nav-text">float方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-BFC、IFC、GFC、FFC"><span class="nav-number">1.0.2.</span> <span class="nav-text">css BFC、IFC、GFC、FFC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用dom节点绘制一个微信logo"><span class="nav-number">1.0.3.</span> <span class="nav-text">用dom节点绘制一个微信logo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型转换"><span class="nav-number">1.0.4.</span> <span class="nav-text">类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据的浅拷贝和深拷贝，数据深拷贝的由来以及实现方式"><span class="nav-number">1.0.5.</span> <span class="nav-text">数据的浅拷贝和深拷贝，数据深拷贝的由来以及实现方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this"><span class="nav-number">1.0.6.</span> <span class="nav-text">this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-number">1.0.7.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-number">1.0.8.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动画"><span class="nav-number">1.0.9.</span> <span class="nav-text">动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是动画队列？动画队列有哪些方式？"><span class="nav-number">1.0.10.</span> <span class="nav-text">什么是动画队列？动画队列有哪些方式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端存储-数据持久化"><span class="nav-number">1.0.11.</span> <span class="nav-text">前端存储 数据持久化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#和服务端的数据交互"><span class="nav-number">1.0.12.</span> <span class="nav-text">和服务端的数据交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件"><span class="nav-number">1.0.13.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步异步"><span class="nav-number">1.0.14.</span> <span class="nav-text">同步异步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端优化"><span class="nav-number">1.0.15.</span> <span class="nav-text">前端优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端可视化"><span class="nav-number">1.0.16.</span> <span class="nav-text">前端可视化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端开发方案"><span class="nav-number">1.0.17.</span> <span class="nav-text">前端开发方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#封装"><span class="nav-number">1.0.18.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件动手题"><span class="nav-number">1.0.19.</span> <span class="nav-text">组件动手题</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">书圣</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
