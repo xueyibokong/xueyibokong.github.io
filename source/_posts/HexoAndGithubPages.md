@@ -5,6 +5,7 @@ tags:
 	- blog
 	- Github Pages
 	- hexo
+categories: 技术
 ---
 
 # GitHub Pages + Hexo To My Blog
