@@ -67,7 +67,7 @@
 
 
 
-  <meta name="keywords" content="前端, 网站, 全栈" />
+  <meta name="keywords" content="前端,布局," />
 
 
 
@@ -78,17 +78,21 @@
 
 
 
-<meta name="description" content="随笔记录">
-<meta name="keywords" content="前端">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ZJ的智慧果树">
-<meta property="og:url" content="http://blog.thephenix.com/index.html">
+<meta name="description" content="flex的概念flex是一种可伸缩的布局方式，由css3提供，主要分为两层结构（可重复嵌套），伸缩容器（flex container）和伸缩项目（felx item），为包含关系。可以轻松解决一些复杂的css布局，如自动分割，垂直居中等。在考虑大规模应用此项技术之前可以进行兼容性查阅，视情况而定。 flex特性通过display:flex;便可以定义一组flex模型了；1234567display">
+<meta name="keywords" content="前端,布局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FLEXBOX(弹性布局)">
+<meta property="og:url" content="http://blog.thephenix.com/2018/05/26/FlexLayout/index.html">
 <meta property="og:site_name" content="ZJ的智慧果树">
-<meta property="og:description" content="随笔记录">
+<meta property="og:description" content="flex的概念flex是一种可伸缩的布局方式，由css3提供，主要分为两层结构（可重复嵌套），伸缩容器（flex container）和伸缩项目（felx item），为包含关系。可以轻松解决一些复杂的css布局，如自动分割，垂直居中等。在考虑大规模应用此项技术之前可以进行兼容性查阅，视情况而定。 flex特性通过display:flex;便可以定义一组flex模型了；1234567display">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/flexModel.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/flexbox.jpg">
+<meta property="og:updated_time" content="2018-05-26T14:53:07.225Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZJ的智慧果树">
-<meta name="twitter:description" content="随笔记录">
+<meta name="twitter:title" content="FLEXBOX(弹性布局)">
+<meta name="twitter:description" content="flex的概念flex是一种可伸缩的布局方式，由css3提供，主要分为两层结构（可重复嵌套），伸缩容器（flex container）和伸缩项目（felx item），为包含关系。可以轻松解决一些复杂的css布局，如自动分割，垂直居中等。在考虑大规模应用此项技术之前可以进行兼容性查阅，视情况而定。 flex特性通过display:flex;便可以定义一组flex模型了；1234567display">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/flexModel.jpg">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.thephenix.com/"/>
+  <link rel="canonical" href="http://blog.thephenix.com/2018/05/26/FlexLayout/"/>
 
 
 
 
 
-  <title>ZJ的智慧果树</title>
+  <title>FLEXBOX(弹性布局) | ZJ的智慧果树</title>
   
 
 
@@ -143,8 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,313 +284,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.thephenix.com/2018/05/26/LayoutSkill/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xueyibokong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/WechatIMG42.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZJ的智慧果树">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/26/LayoutSkill/" itemprop="url">浅谈前端为适应不同终端的布局技巧</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-26T23:18:14+08:00">
-                2018-05-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-今天关于前端布局做一个小总结，大概分为4部分，如果以后再有新想法则后补。
-
-响应式设计响应式布局已经是老生常谈了。为了让我们的网站在跨终端后能有着很好的前端表现，响应式可谓是功不可没。推介一篇博文《响应式那些小事》。
-
-下面是我抽取bootstrap中响应式布局代码思想写的一个小例子
-
-demo 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/26/LayoutSkill/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.thephenix.com/2018/05/26/LayoutUnit/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xueyibokong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/WechatIMG42.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZJ的智慧果树">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/26/LayoutUnit/" itemprop="url">布局中长度单位的灵活应用</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-26T22:56:20+08:00">
-                2018-05-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          如果说把RWD和AWD比作网页布局树干的话，那这些单位便是枝叶了，只有很好的结合应用，才能将页面灵活起来。
-先列举一下css中的长度单位:12345678910111213141516171819长度单位	版本	描述文本相对长度单位 Font-relative Length Unitsem	CSS1
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/26/LayoutUnit/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -617,9 +316,7 @@ demo
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/26/FlexLayout/" itemprop="url">FLEXBOX(弹性布局)</a></h2>
+          <h2 class="post-title" itemprop="name headline">FLEXBOX(弹性布局)</h2>
         
 
         <div class="post-meta">
@@ -691,19 +388,20 @@ demo
       
 
       
-        
-          
-          flex的概念flex是一种可伸缩的布局方式，由css3提供，主要分为两层结构（可重复嵌套），伸缩容器（flex container）和伸缩项目（felx item），为包含关系。可以轻松解决一些复杂的css布局，如自动分割，垂直居中等。在考虑大规模应用此项技术之前可以进行兼容性查阅，视情况而定。
+        <h1 id="flex的概念"><a href="#flex的概念" class="headerlink" title="flex的概念"></a>flex的概念</h1><p>flex是一种可伸缩的布局方式，由css3提供，主要分为两层结构（可重复嵌套），伸缩容器（flex container）和伸缩项目（felx item），为包含关系。可以轻松解决一些复杂的css布局，如自动分割，垂直居中等。在考虑大规模应用此项技术之前可以进行<a href="https://caniuse.com/" target="_blank" rel="noopener">兼容性查阅</a>，视情况而定。</p>
+<h1 id="flex特性"><a href="#flex特性" class="headerlink" title="flex特性"></a>flex特性</h1><p>通过display:flex;便可以定义一组flex模型了；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">display: -moz-box; /* Firefox */</span><br><span class="line">display: -ms-flexbox; /* IE10 */</span><br><span class="line">display: -webkit-box; /* Safari */</span><br><span class="line">display: -webkit-flex; /* Chrome, WebKit */</span><br><span class="line">display: box;</span><br><span class="line">display: flexbox;</span><br><span class="line">display: flex;</span><br></pre></td></tr></table></figure></p>
+<p>设为Flex布局以后，子元素的<code>float</code>、<code>clear</code>和<code>vertical-align</code>属性将失效。</p>
+<h4 id="相比较传统web布局而言，flex布局有很多优点："><a href="#相比较传统web布局而言，flex布局有很多优点：" class="headerlink" title="相比较传统web布局而言，flex布局有很多优点："></a>相比较传统web布局而言，flex布局有很多优点：</h4><p>传统布局是自上而下的线性布局，对于内联元素是从左到右排版，那么flex则是根据flex-flow流布局。</p>
+<h1 id="flex图解"><a href="#flex图解" class="headerlink" title="flex图解"></a>flex图解</h1><p><img src="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/flexModel.jpg" alt="flex盒子模型图"></p>
+<center>flex盒子模型图</center>
 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/26/FlexLayout/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<p><img src="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/flexbox.jpg" alt="flex属性图"></p>
+<center>flex属性图</center>
+
+<h1 id="flex属性工具"><a href="#flex属性工具" class="headerlink" title="flex属性工具"></a>flex属性工具</h1><p>你可以通过这个<a href="../../../../html/Flexbox.html">demo</a>来测试flexbox的每一个属性从而更加方便的记忆理解。<br>另外，可以试试这个<a href="http://flexboxfroggy.com/#zh-cn" target="_blank" rel="noopener">FlexboxFroggy</a>。</p>
+<p>请用支持vh,vw的浏览器调试，在测试属性时候请结合着调节浏览器窗口size。</p>
+<p>原文=&gt; <a href="http://blog.thephenix.com/2018/05/26/FlexLayout/">http://blog.thephenix.com/2018/05/26/FlexLayout/</a> 【请尊重版权】</p>
+
       
     </div>
     
@@ -718,313 +416,42 @@ demo
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.thephenix.com/2018/05/26/GitApi/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xueyibokong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/WechatIMG42.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZJ的智慧果树">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/26/GitApi/" itemprop="url">Git Api</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-26T16:34:53+08:00">
-                2018-05-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/前端/" rel="tag"># 前端</a>
           
-
+            <a href="/tags/布局/" rel="tag"># 布局</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          API推荐这个教程 ProGit原文=&gt; http://blog.thephenix.com/2018/05/26/GitApi/ 【请尊重版权】
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/26/GitApi/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/26/GitApi/" rel="next" title="Git Api">
+                <i class="fa fa-chevron-left"></i> Git Api
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.thephenix.com/2018/05/26/NginxCof/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xueyibokong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/WechatIMG42.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZJ的智慧果树">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/26/NginxCof/" itemprop="url">NginxCof</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-26T16:34:53+08:00">
-                2018-05-26
-              </time>
+              <a href="/2018/05/26/LayoutUnit/" rel="prev" title="布局中长度单位的灵活应用">
+                布局中长度单位的灵活应用 <i class="fa fa-chevron-right"></i>
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          NGINX基础配置以及配合TLS实现多站点和https、wss见 NGINX基础配置以及配合TLS实现多站点和https、wss
-原文=&gt; http://blog.thephenix.com/2018/05/26/NginxCof/ 【请尊重版权】
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/26/NginxCof/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1034,306 +461,37 @@ demo
   </article>
 
 
-    
+
+    <div class="post-spread">
       
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.thephenix.com/2018/05/25/HexoAndGithubPages/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xueyibokong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/WechatIMG42.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZJ的智慧果树">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/25/HexoAndGithubPages/" itemprop="url">Github Pages + hexo 建博客</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-25T10:30:12+08:00">
-                2018-05-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          GitHub Pages + Hexo To My Blogxueyibokong.github.io我自己的github仓库
-Hexo Hexo 文档blog建站工具通过配置 _config.yml 的 Deployment 来关联 xueyibokong.github.io
-目录分析_confi
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/25/HexoAndGithubPages/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.thephenix.com/2018/05/25/FEPunktyWiedzy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xueyibokong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/WechatIMG42.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZJ的智慧果树">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/25/FEPunktyWiedzy/" itemprop="url">前端面试题</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-25T10:30:12+08:00">
-                2018-05-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          The article has been encrypted, please enter your password to view.<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/25/FEPunktyWiedzy/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -1341,6 +499,10 @@ Hexo Hexo 文档blog建站工具通过配置 _config.yml 的 Deployment 来关�
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1361,8 +523,17 @@ Hexo Hexo 文档blog建站工具通过配置 _config.yml 的 Deployment 来关�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1442,6 +613,22 @@ Hexo Hexo 文档blog建站工具通过配置 _config.yml 的 Deployment 来关�
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#flex的概念"><span class="nav-number">1.</span> <span class="nav-text">flex的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flex特性"><span class="nav-number">2.</span> <span class="nav-text">flex特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#相比较传统web布局而言，flex布局有很多优点："><span class="nav-number">2.0.0.1.</span> <span class="nav-text">相比较传统web布局而言，flex布局有很多优点：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flex图解"><span class="nav-number">3.</span> <span class="nav-text">flex图解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flex属性工具"><span class="nav-number">4.</span> <span class="nav-text">flex属性工具</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1583,6 +770,10 @@ Hexo Hexo 文档blog建站工具通过配置 _config.yml 的 Deployment 来关�
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*边框模型*/
+		/*圆角*/
+		/*边框*/
+		/*阴影*/
+		/*图片边框*/
+		/*响应式的类别*/
+		/*列数*/
+		/*响应式方法*/
+		.container {
+			/*固定布局*/
+			width: 100%;
+			min-height: 1px;
+			margin: 0 auto;
+		}
+		.container > .row {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.container-fluid {
+			/*流式布局*/
+			width: 100%;
+			min-height: 1px;
+		}
+		.container-fluid > .row {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		* {
+			box-sizing: border-box;
+		}
+		/*响应式*/
+		.container {
+			width: 100%;
+			height: 100%;
+		}
+		.container-fluid {
+			width: 100%;
+			height: 100%;
+		}
+		/*小于930px*/
+		@media screen and (max-width: 930px) {
+			.container > .row > .cls-s-1 {
+				width: 8.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-1 {
+				width: 8.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-2 {
+				width: 16.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-2 {
+				width: 16.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-3 {
+				width: 25%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-3 {
+				width: 25%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-4 {
+				width: 33.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-4 {
+				width: 33.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-5 {
+				width: 41.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-5 {
+				width: 41.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-6 {
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-6 {
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-7 {
+				width: 58.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-7 {
+				width: 58.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-8 {
+				width: 66.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-8 {
+				width: 66.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-9 {
+				width: 75%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-9 {
+				width: 75%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-10 {
+				width: 83.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-10 {
+				width: 83.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-11 {
+				width: 91.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-11 {
+				width: 91.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-s-12 {
+				width: 100%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-s-12 {
+				width: 100%;
+				height: 100%;
+				float: left;
+			}
+		}
+		/*介于930px到1024px之间*/
+		@media screen and (min-width: 930px) {
+			.container > .row > .cls-m-1 {
+				width: 8.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-1 {
+				width: 8.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-2 {
+				width: 16.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-2 {
+				width: 16.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-3 {
+				width: 25%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-3 {
+				width: 25%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-4 {
+				width: 33.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-4 {
+				width: 33.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-5 {
+				width: 41.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-5 {
+				width: 41.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-6 {
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-6 {
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-7 {
+				width: 58.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-7 {
+				width: 58.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-8 {
+				width: 66.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-8 {
+				width: 66.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-9 {
+				width: 75%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-9 {
+				width: 75%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-10 {
+				width: 83.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-10 {
+				width: 83.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-11 {
+				width: 91.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-11 {
+				width: 91.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-m-12 {
+				width: 100%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-m-12 {
+				width: 100%;
+				height: 100%;
+				float: left;
+			}
+		}
+		/*大于1024px*/
+		@media screen and (min-width: 1240px) {
+			.container {
+				min-width: 1240px;
+				height: 100%;
+				border: none;
+			}
+			.container > .row > .cls-l-1 {
+				width: 8.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-1 {
+				width: 8.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-2 {
+				width: 16.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-2 {
+				width: 16.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-3 {
+				width: 25%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-3 {
+				width: 25%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-4 {
+				width: 33.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-4 {
+				width: 33.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-5 {
+				width: 41.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-5 {
+				width: 41.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-6 {
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-6 {
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-7 {
+				width: 58.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-7 {
+				width: 58.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-8 {
+				width: 66.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-8 {
+				width: 66.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-9 {
+				width: 75%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-9 {
+				width: 75%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-10 {
+				width: 83.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-10 {
+				width: 83.33333333%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-11 {
+				width: 91.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-11 {
+				width: 91.66666667%;
+				height: 100%;
+				float: left;
+			}
+			.container > .row > .cls-l-12 {
+				width: 100%;
+				height: 100%;
+				float: left;
+			}
+			.container-fluid > .row > .cls-l-12 {
+				width: 100%;
+				height: 100%;
+				float: left;
+			}
+		}
+	</style>
+	<style>
+		body{
+			color: #fff;
+			text-align: center;
+			box-sizing: border-box;
+		}
+		.row>div{
+			height: 35px;
+			line-height: 35px;
+		}
+		.row>div:nth-of-type(2n){
+			
+			background: #333;
+		}
+		.row>div:nth-of-type(2n+1){
+			background: #ccc;
+		}
+		.menu2,.mune-con{
+			display: none;
+		}
+		@media only screen and (max-width: 930px) {
+			.menu1{
+				display: none;
+			}
+			.menu2{
+				display: block;
+			}
+		}
+		@media only screen and (min-width: 930px) {
+			.mune-con-p{
+				display: none;
+			}
+		}
+		.mune-con>p{
+			background: #333;
+			border-bottom: #CCCCCC;
+			margin: 0;
+    		margin-bottom: 1px;
+			line-height: 35px;
+		}
+	</style>
+</head>
+<body>
+	<p style="color: #3b5998">改变窗口宽度，查看效果</p>
+	<div class="container">
+		<div class="row">
+			<div class="cls-s-6 cls-m-4 cls-l-2">XUEYIBOKONG</div>
+			<div class="cls-s-6 cls-m-8 cls-l-10">
+				<div class="container menu1">
+					<div class="row">
+						<span class="cls-s-4 cls-m-4 cls-l-4">ABOUT ME</span>
+						<span class="cls-s-4 cls-m-4 cls-l-4">PROJECT</span>
+						<span class="cls-s-4 cls-m-4 cls-l-4">MY ZONE</span>
+					</div>
+				</div>
+				<div class="menu2">
+					<div class="mune-btn"><span style="color:#ce6464">点击</span>   MUNE</div>
+				</div>
+			</div>
+		</div>
+		<div class="mune-con-p">
+			<div class="mune-con">
+				<p>ABOUT ME</p>
+				<p>PROJECT</p>
+				<p>MY ZONE</p>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="cls-s-4 cls-m-7 cls-l-1">1</div>
+			<div class="cls-s-4 cls-m-2 cls-l-5">2</div>
+			<div class="cls-s-4 cls-m-3 cls-l-6">3</div>
+		</div>
+	</div>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>
+<script type="text/javascript">
+	
+
+		var flag = true;
+		var btn = document.getElementsByClassName("mune-btn")[0];
+		var con = document.getElementsByClassName("mune-con")[0];
+		btn.onclick = function(){
+			if(!flag){
+				con.style.display = "none";
+				flag = true;
+			}else{
+				con.style.display = "block";
+				flag = false;
+			}
+		}
+
+</script>
