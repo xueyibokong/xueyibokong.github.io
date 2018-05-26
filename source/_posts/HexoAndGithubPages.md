@@ -12,7 +12,7 @@ categories: 技术
 ## xueyibokong.github.io
 我自己的github仓库
 
-## Hexo [remote是Hexo For xueyibokong.github.io] [Hexo 文档](https://hexo.io/zh-cn/docs)
+## Hexo [Hexo 文档](https://hexo.io/zh-cn/docs)
 blog建站工具
 通过配置 `_config.yml` 的 `Deployment` 来关联 `xueyibokong.github.io`
 

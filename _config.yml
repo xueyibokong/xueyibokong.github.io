@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: ZJ的咖啡屋 #网站标题
-subtitle: 少小多才学，平生志气高。别人怀宝剑，我有笔如刀。 #网站副标题
+title: ZJ的智慧果树 #网站标题
+subtitle: 别人怀宝剑 我有笔如刀 #网站副标题
 description: 随笔记录 #网站描述
 keywords: 前端
-author: 书圣
+author: xueyibokong
 language: zh-CN
 timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://blog.thephenix.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -55,8 +55,8 @@ index_generator:
   
 # 分类和标签的设置
 default_category: uncategorized #默认分类
-category_map: #分类别名
-tag_map: #标签别名
+category_map: 分类 #分类别名
+tag_map: 标签 #标签别名
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -81,3 +81,29 @@ deploy:
   type : git
   repository : git@github.com:xueyibokong/xueyibokong.github.io.git
   branch : master
+
+# Security
+##
+encrypt:
+    enable: true
+
+# 文章加永久链接和版权
+addlink:
+  before_text: 原文=>  # text before the post link
+  after_text: 【请尊重版权】 # text after the post link
+
+# 二次元宠物
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  model:
+    use: live2d-widget-model-wanko
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true

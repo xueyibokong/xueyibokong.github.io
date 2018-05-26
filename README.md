@@ -2,13 +2,13 @@
 ## xueyibokong.github.io
 我自己的github仓库
 
-## Hexo [remote是Hexo For xueyibokong.github.io]
+## Hexo
 ·[Hexo 指令](https://hexo.io/zh-cn/docs/commands.html)
 blog建站工具
 通过配置 `_config.yml` 的 `Deployment` 来关联 `xueyibokong.github.io`
 
 ## 目录分析
-#### _config.yml
+#### `_config.yml`
 全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。这个文件下面会做较为详细的介绍。
 #### scaffolds
 scaffolds是“脚手架”的意思，当你新建一篇文章（hexo new 'title'）的时候，hexo是根据这个目录下的文件进行构建的。基本不用关心。
@@ -41,7 +41,6 @@ type:
 >`date`  时间
 >`tags`  文章标签
 >`type`  文章类型
-
 #### Run server [查看效果]
 ```
 $ hexo server
@@ -88,4 +87,3 @@ $ hexo s
 ```
 $ hexo deploy
 ```
-
