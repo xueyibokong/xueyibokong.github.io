@@ -6,7 +6,8 @@
     "version": "3.7.1"
   },
   "scripts" : {
-    "commit" : "hexo g && hexo d && git add . && git commit -m'提交文章更新' && git push origin hexo"
+    "go.hexo" : "hexo g && hexo d",
+    "go.github" : "git add . && git commit -m'提交文章更新' && git push origin hexo"
   },
   "dependencies": {
     "hexo": "^3.2.0",
