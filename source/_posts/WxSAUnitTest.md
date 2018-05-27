@@ -7,7 +7,7 @@ tags:
 categories: 
     - 技术
 ---
-[项目github地址](http://git@github.com:xueyibokong/wxSAUnitTest.git)
+[项目github地址](https://github.com/xueyibokong/wxSAUnitTest)
 # socket 【多人群聊，用户头像是微信用户信息】
 利用微信的socket与后端完成通道消息传输。
 <center>![](https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/sayhello.gif)</center>

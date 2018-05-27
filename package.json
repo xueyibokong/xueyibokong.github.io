@@ -5,6 +5,9 @@
   "hexo": {
     "version": "3.7.1"
   },
+  "scripts" : {
+    "commit" : "hexo g && hexo d && git add . && git commit -m'提交文章更新' && git push origin hexio"
+  },
   "dependencies": {
     "hexo": "^3.2.0",
     "hexo-addlink": "^1.0.4",
