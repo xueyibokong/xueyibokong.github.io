@@ -1,0 +1,339 @@
+﻿layout : false
+---
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>flexDemo</title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+		.flex-container{
+			/*默认flex-flow流为横向ltr*/
+			display: -moz-box;  			/* Firefox */ 
+			display: -ms-flexbox;    		/* IE10 */ 
+			display: -webkit-box;    		/* Safari */  
+			display: -webkit-flex;    		/* Chrome, WebKit */ 
+			display: box;  
+			display: flexbox;  
+			display: flex;
+		}
+		.flex-container-reverse{
+			/*flex-flow流为横向rtl*/
+			display: -moz-box;  			/* Firefox */ 
+			display: -ms-flexbox;    		/* IE10 */ 
+			display: -webkit-box;    		/* Safari */  
+			display: -webkit-flex;    		/* Chrome, WebKit */ 
+			display: box;  
+			display: flexbox;  
+			display: flex;
+			flex-direction: row-reverse;
+		}
+		.flex-container-column{
+			/*flex-flow流为纵向utd(up to down)*/
+			display: -moz-box;  			/* Firefox */ 
+			display: -ms-flexbox;    		/* IE10 */ 
+			display: -webkit-box;    		/* Safari */  
+			display: -webkit-flex;    		/* Chrome, WebKit */ 
+			display: box;  
+			display: flexbox;  
+			display: flex;	
+			flex-direction: column;
+		}
+		.flex-container-column-reverse{
+			/*flex-flow流为纵向dtu(down to up)*/
+			display: -moz-box;  			/* Firefox */ 
+			display: -ms-flexbox;    		/* IE10 */ 
+			display: -webkit-box;    		/* Safari */  
+			display: -webkit-flex;    		/* Chrome, WebKit */ 
+			display: box;  
+			display: flexbox;  
+			display: flex;	
+			flex-direction: column-reverse;
+		}
+		.flex-item{
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 0;
+		}
+		
+	</style>
+	<style type="text/css">
+		body{
+			margin: 0;
+			text-align: center;
+			overflow: hidden;
+		}
+		em{
+			color: #007fa7;
+		}
+		span{
+			box-sizing: border-box;
+			-webkit-user-select: none;					/*此属性用于消除webkit内核浏览器点击事件造成文本选中*/
+			-moz-user-select: none;
+			-ms-user-select: none;
+		    display: inline-block;
+			padding:10px;border: 1px solid #ccc;
+			background: #d4771b;
+			color: #fff;
+		}
+		span:active{
+			color:#d4771b;
+			border-color: #d4771b;
+			background: none;
+		}
+		strong{
+			color: #fff;
+		    background: blue;
+		    padding: 10px;
+	        display: inline-block;
+		}
+		/*纵向*/
+		.column-box{
+			height: 100vh;
+		}
+		.column{
+			/*conten*/
+			background-color: #eee;
+			flex-grow:10;
+		}
+		.column:nth-of-type(1){
+			/*header*/
+			background-color: #b97023;
+			flex-grow:1;
+		}
+		.column:nth-of-type(3){
+			/*footer*/
+			background-color: #868686;
+			flex-grow:1;
+		}
+		/*横向*/		
+		.row-box{
+			height: 100px;
+		}
+		.row{
+			background: #ccc;
+			color: white;
+		}
+		.row:nth-of-type(2n){
+			background: #999;
+		}
+		.row:nth-of-type(2n+1){
+			background: #777;
+		}
+		.row:nth-of-type(3n){
+			background: #555;
+		}
+		/*内容测试*/
+		#test-content-01>.row{
+			margin: 3px;
+			width: 400px;
+			margin: 25px;
+		}
+		#test-content-04{
+			flex-wrap: wrap;
+			height: 400px;
+		}
+		#test-content-04>.row{
+			margin: 0 10px;
+		}
+	</style>
+</head>
+<body>
+		<div class="flex-item flex-container-column column-box">
+			<div class="flex-item column" style="display: flex;">
+				<span style="margin: auto;">this is header!(垂直居中)</span>
+			</div>
+			<div class="flex-item column" style="overflow: scroll;">
+				
+				<div style="text-align: left;">
+					<h4>about flex container | flex容器</h4>
+					<hr />
+					<strong>flex-direction:</strong>
+					<span class="btn01">纵向倒序(cloumn/column-reverse)</span>
+					<span class="btn02">横向倒序(row/row-resever)</span>
+					<br />
+					<hr />
+					<p>注意：【换行】flexitem 是对剩余空间进行分割，因此没有足够的剩余空间则flexitem会在flex-flow轴方向上的尺寸为零;</p>
+					<!-- demo -->
+					<div class="flex-item flex-container" id="test-content-01" style="background: #ffd0e1;">
+						<div class="row">one</div>
+						<div class="row">two</div>
+						<div class="row">three</div>
+						<div class="row">four</div>
+					</div>
+					<strong>flex-wrap:</strong><em class="btn-flex-wrap"></em>
+					<span class="btn-flex-wrap">nowrap</span>
+					<span class="btn-flex-wrap">wrap</span>
+					<span class="btn-flex-wrap">wrap-reverse</span>
+					<br />
+					<hr />
+					<strong>flex-flow:</strong>属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+					<hr />
+					<p>注意：【以主轴对齐】针对有间隙的flex item，这里将flex item用百分比设定长度，而并非用flex-grow自动分割</p>
+					<!-- demo -->
+					<div class="flex-item flex-container" id="test-content-02" style="background: #ffd0e1;">
+						<div class="row" style="width: 20%;margin: 20px;">one</div>
+						<div class="row" style="width: 10%;margin: 20px;">two</div>
+						<div class="row" style="width: 30%;margin: 20px;">three</div>
+					</div>
+					<strong>justify-content:</strong> <em class="btn-justify-content"></em>
+					<span class="btn-justify-content"> flex-start</span>
+					<span class="btn-justify-content"> flex-end </span>
+					<span class="btn-justify-content">  center </span>
+					<span class="btn-justify-content"> space-between </span>
+					<span class="btn-justify-content">space-around</span>
+					<hr />
+					<p>注意：【以交叉轴对齐】</p>
+					<!-- demo -->
+					<div class="flex-item flex-container" id="test-content-03" style="background: #ffd0e1;">
+						<div class="row" style="width: 20%;height:40px;margin: 20px;">one</div>
+						<div class="row" style="width: 10%;height:20px;margin: 20px;">two</div>
+						<div class="row" style="width: 30%;height:80px;margin: 20px;">three</div>
+					</div>
+					<strong>align-items: </strong><em class="btn-align-items"></em>
+					<span class="btn-align-items">flex-start</span>
+					<span class="btn-align-items">flex-end </span>
+					<span class="btn-align-items">center </span>
+					<span class="btn-align-items">baseline </span>
+					<hr />
+					<p>注意：【以交叉轴对齐存在多行时即多条轴线时】</p>
+					<!-- demo -->
+					<div class="flex-item flex-container" id="test-content-04" style="background: #ffd0e1;">
+						<div class="row" style="width:150px;height:50px;">1</div>
+						<div class="row" style="width:150px;height:50px;">2</div>
+						<div class="row" style="width:150px;height:50px;">3</div>
+						<div class="row" style="width:150px;height:50px;">4</div>
+						<div class="row" style="width:150px;height:50px;">5</div>
+						<div class="row" style="width:150px;height:50px;">6</div>
+						<div class="row" style="width:150px;height:50px;">7</div>
+						<div class="row" style="width:150px;height:50px;">8</div>
+						<div class="row" style="width:150px;height:50px;">9</div>
+						<div class="row" style="width:150px;height:50px;">10</div>
+						<div class="row" style="width:150px;height:50px;">11</div>
+						<div class="row" style="width:150px;height:50px;">12</div>
+						<div class="row" style="width:150px;height:50px;">13</div>
+						<div class="row" style="width:150px;height:50px;">14</div>
+						<div class="row" style="width:150px;height:50px;">15</div>
+						<div class="row" style="width:150px;height:50px;">16</div>
+						<div class="row" style="width:150px;height:50px;">17</div>
+						<div class="row" style="width:150px;height:50px;">18</div>
+						<div class="row" style="width:150px;height:50px;">19</div>
+						<div class="row" style="width:150px;height:50px;">20</div>
+					</div>
+					<strong>align-content:</strong> <em class="btn-align-content"></em>
+					<span class="btn-align-content">flex-start</span>
+					<span class="btn-align-content">flex-end</span>
+					<span class="btn-align-content">center</span>
+					<span class="btn-align-content">space-between</span>
+					<span class="btn-align-content">space-around </span>
+					<span class="btn-align-content">stretch</span>
+					
+					<hr />
+					<h4>about flex item | flex项目</h4>
+					<p>注意：【根据每一个flex item的order值进行排序】</p>
+					<strong>order：</strong>
+					<!-- demo -->
+					<div class="flex-item flex-container"  style="background: #ffd0e1;">
+						<div class="row" style="width: 20%;height:40px;margin: 20px; order:1;">one{order:1;}</div>
+						<div class="row" style="width: 10%;height:20px;margin: 20px; order:3;">two{order:3;}</div>
+						<div class="row" style="width: 30%;height:80px;margin: 20px; order:2;">three{order:2;}</div>
+					</div>
+					<hr />
+					<p>注意：【项目的放大比例，默认为0，即如果存在剩余空间，也不放大】可以实现左边固定宽右边自适应</p>
+					<strong>flex-grow：</strong>
+					<!-- demo -->
+					<div class="flex-item flex-container" style="background: #ffd0e1;padding:20px">
+						<div class="row ">one {flex-prow:0;}</div>
+						<div class="row flex-item">two</div>
+						<div class="row flex-item">three</div>
+					</div>	
+					<hr />
+					<p>注意：【属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。】</p>
+					<strong>flex-shrink:</strong>
+					<!-- demo -->
+					<div class="flex-item flex-container" style="background: #ffd0e1;padding:20px">
+						<div class="row flex-item" style="flex-shrink:0;">one {flex-shrink:0;}</div>
+						<div class="row flex-item">two</div>
+						<div class="row flex-item">three</div>
+					</div>	 
+					<hr />
+					<p>注意：【属性定义了在分配多余空间之前，项目占据的主轴空间（main size）】</p>
+					<strong>flex-basis:</strong>
+					<!-- demo -->
+					<div class="flex-item flex-container" style="background: #ffd0e1;padding:20px">
+						<div class="row flex-item" style="flex-basis:200px;">one {flex-basis:200px;}</div>
+						<div class="row flex-item">two</div>
+						<div class="row flex-item">three</div>
+					</div>
+					<hr />
+					<p>注意：【属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。】</p>
+					<strong>flex：</strong>none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+					<hr />
+					<p>注意：【属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。】</p>
+					<strong>align-self:</strong> flex-start | flex-end | center | baseline | stretch;
+					<!--demo-->
+					<div class="flex-item flex-container" id="test-content-05" style="background: #ffd0e1;">
+						<div class="row" style="width: 20%;height:40px;margin: 20px;align-self: flex-end;">one{align-self: flex-end;}</div>
+						<div class="row" style="width: 10%;height:20px;margin: 20px;">two</div>
+						<div class="row" style="width: 30%;height:80px;margin: 20px;">three</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div class="flex-item column flex-container row-box">
+				<div class="row flex-item"><div>btn1</div></div>
+				<div class="row flex-item"><div>btn2</div></div>
+				<div class="row flex-item"><div>btn3</div></div>
+				<div class="row flex-item"><div>btn4</div></div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+<script type="text/javascript">
+	$(function(){
+		$(".btn01").click(function(){
+			$(".column-box").toggleClass("flex-container-column-reverse")
+		});
+		$(".btn02").click(function(){
+			$(".row-box").toggleClass("flex-container-reverse")
+		});
+		
+		$(".btn-flex-wrap").click(function(){
+			var that = $(this);
+			$("#test-content-01").css({
+				"flex-wrap" : that.text()
+			});
+			$("em.btn-flex-wrap").text(that.text());
+		});
+		
+		$(".btn-justify-content").click(function(){
+			var that = $(this);
+			$("#test-content-02").css({
+				"justify-content" : that.text()
+			});
+			$("em.btn-justify-content").text(that.text());
+		});
+		$(".btn-align-items").click(function(){
+			var that = $(this);
+			$("#test-content-03").css({
+				"align-items" : that.text()
+			});
+			$("em.btn-align-items").text(that.text());
+		});
+		$(".btn-align-content").click(function(){
+			var that = $(this);
+			$("#test-content-04").css({
+				"align-content" : that.text()
+			});
+			$("em.btn-align-content").text(that.text());
+		});
+		
+	});
+</script>
+
+

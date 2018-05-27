@@ -1,0 +1,913 @@
+﻿layout: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GIT 常用命令</title>
+    <style>
+        body{
+            margin: 0;
+            background: #efefef;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+        /*块 piece*/
+        .piece{
+            width: 98%;
+            margin: 5px auto 15px auto;
+            border: 1px solid #ccc;
+            border-top:3px solid #D85E23;
+            box-shadow: 0 0 10px #999;
+            line-height: 29px;
+            font-size: 15px;
+        }
+        .piece>li{
+            padding: 7px 15px;
+            color: #888;
+            border-top:1px solid #ddd;
+        }
+        .piece>li>div:nth-of-type(1)>span{
+            color: #D85E23;
+        }
+        .piece>li>div:nth-of-type(2)>span{
+            color: #2399D8;
+        }
+        .piece>li>div:nth-of-type(3)>span{
+            color: #8623D8;
+        }
+        .piece>li:nth-of-type(1){
+            color: #000;
+            line-height: 35px;
+            font-size: 17px;
+            border: none;
+        }
+        .color-index{
+            overflow:hidden;
+        }
+        .color-index>div{
+            float: left;
+            width: 25%;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: #fff;
+        }
+        .color-index>div:nth-of-type(1){
+            background: #D85E23;
+        }
+        .color-index>div:nth-of-type(2){
+            background: #2399D8;
+        }
+        .color-index>div:nth-of-type(3){
+            background: #8623D8;
+        }
+        .color-index>div:nth-of-type(4){
+            background: #888
+        }
+    </style>
+</head>
+<body>
+    <ul class="piece">
+        <li>GIT</li>
+        <li>
+            <div>工作区：
+                <span style="color:#888;">Workspace</span>
+            </div>
+            <div>暂存区：
+                <span style="color:#888;">Index / Stage</span>
+            </div>
+            <div>仓库区（或本地仓库）：
+                <span style="color:#888;">Repository</span>
+            </div>
+            <div>远程仓库：
+                <span>Remote</span>
+            </div>
+        </li>
+    </ul>
+    <ul class="piece color-index">
+        <div>命令</div>
+        <div>作用</div>
+        <div>注意</div>
+        <div>旁白</div>
+    </ul>
+
+    <ul class="piece">
+        <li>GIT 初始化</li>
+        <li>
+            <div>命令：
+                <span>git init</span>
+            </div>
+            <div>作用：
+                <span>在当前目录新建一个Git代码库</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git init [project-name]</span>
+            </div>
+            <div>作用：
+                <span>新建一个目录，将其初始化为Git代码库</span>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="piece">
+        <li>GIT 配置</li>
+        <li>
+            <div>命令：
+                <span>git config --list</span>
+            </div>
+            <div>作用：
+                <span>显示当前的Git配置</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git config -e [--global]</span>
+            </div>
+            <div>作用：
+                <span>编辑Git配置文件</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>$ git config [--global] user.name "[name]"</br>
+                    $ git config [--global] user.email "[email address]"</span>
+            </div>
+            <div>作用：
+                <span>设置提交代码时的用户信息</span>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="piece">
+        <li>GIT 克隆、GIT 关联</li>
+        <li>
+            <div>命令：
+                <span>git clone [url]</span>
+            </div>
+            <div>作用：
+                <span>下载一个项目和它的整个代码历史</span>
+            </div>
+            <div>注意：
+                <span>本地没有仓库clone只会把远端仓库的master分支clone下来</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git remote add origin [url]</span>
+            </div>
+            <div>作用：
+                <span>将本地仓库关联到远程仓库</span>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="piece">
+        <li>GIT 文件（增加/删除）</li>
+        <li>
+            <div>命令：
+                <span>git add [file1] [file2] ...</span>
+            </div>
+            <div>作用：
+                <span>添加指定文件到暂存区</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git add [dir]</span>
+            </div>
+            <div>作用：
+                <span>添加指定目录到暂存区，包括子目录</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git add .</span>
+            </div>
+            <div>作用：
+                <span>添加当前目录的所有文件到暂存区</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git add -p</span>
+            </div>
+            <div>作用：
+                <span>添加每个变化前，都会要求确认; 对于同一个文件的多处变化，可以实现分次提交</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git rm [file1] [file2] ...</span>
+            </div>
+            <div>作用：
+                <span>删除工作区文件，并且将这次删除放入暂存区</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git rm --f [file1] [file2] ...</span>
+            </div>
+            <div>作用：
+                <span>不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git clean -df </span>
+            </div>
+            <div>作用：
+                <span>清理本地缓存</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git rm --cached [file]</span>
+            </div>
+            <div>作用：
+                <span>停止追踪指定文件，但该文件会保留在工作区（即从缓存区删除）</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git mv [file-original] [file-renamed]</span>
+            </div>
+            <div>作用：
+                <span>重命名文件，并且将这个重命名放入暂存区</span>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="piece">
+        <li>GIT 提交</li>
+        <li>
+            <div>命令：
+                <span>git commit -m [message]</span>
+            </div>
+            <div>作用：
+                <span>提交暂存区到仓库区</span>
+            </div>
+            <div>注意：
+                <span>[message]中内容必须写</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git commit [file1] [file2] ... -m [message]</span>
+            </div>
+            <div>作用：
+                <span>提交暂存区的指定文件到仓库区</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git commit -a</span>
+            </div>
+            <div>作用：
+                <span>提交工作区自上次commit之后的变化，直接到仓库区</span>
+            </div>
+            <div>注意：
+                <span>这个不错，适合短时间内多次提交（但是要对自己工作区变化比较清楚）</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git commit -v</span>
+            </div>
+            <div>作用：
+                <span>提交时显示所有diff信息</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git commit --amend -m [message]</span>
+            </div>
+            <div>作用：
+                <span>使用一次新的commit，替代上一次提交；如果代码没有任何新变化，则用来改写上一次commit的提交信息</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git commit --amend [file1] [file2] ...</span>
+            </div>
+            <div>作用：
+                <span>重做上一次commit，并包括指定文件的新变化</span>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="piece">
+        <li>GIT 分支</li>
+        <li>
+            <div>命令：
+                <span>git branch</span>
+            </div>
+            <div>作用：
+                <span>列出所有本地分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git branch -r</span>
+            </div>
+            <div>作用：
+                <span>列出所有远程分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git branch -a</span>
+            </div>
+            <div>作用：
+                <span>列出所有本地分支和远程分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git branch [branch-name]</span>
+            </div>
+            <div>作用：
+                <span>新建一个分支，但依然停留在当前分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git checkout -b [branch]</span>
+            </div>
+            <div>作用：
+                <span>新建一个分支，并切换到该分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git branch [branch] [commit]</span>
+            </div>
+            <div>作用：
+                <span>新建一个分支，指向指定commit</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git branch --track [branch] [remote-branch]</span>
+            </div>
+            <div>作用：
+                <span>新建一个分支，与指定的远程分支建立追踪关系</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git checkout -b mybranch origin/mybranch</span>
+            </div>
+            <div>作用：
+                <span>取远程分支并分化一个新分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git checkout -</span>
+            </div>
+            <div>作用：
+                <span>切换到上一个分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git branch --set-upstream [branch] [remote-branch]</span>
+            </div>
+            <div>作用：
+                <span>建立追踪关系，在现有分支与指定的远程分支之间</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git merge [branch]</span>
+            </div>
+            <div>作用：
+                <span>合并指定分支到当前分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git cherry-pick [commit]</span>
+            </div>
+            <div>作用：
+                <span>选择一个commit，合并进当前分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git branch -d [branch-name]</span>
+            </div>
+            <div>作用：
+                <span>删除分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git branch -d [branch-name]</span>
+            </div>
+            <div>作用：
+                <span>强制删除分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git push origin --delete [branch-name]</br>git branch -dr [remote/branch]</span>
+            </div>
+            <div>作用：
+                <span>删除远程分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git push origin :[branch-name]</span>
+            </div>
+            <div>作用：
+                <span>推送空分支到远程分支（删除远程分支的另一种做法）</span>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="piece">
+        <li>GIT 标签</li>
+        <li>
+            <div>命令：
+                <span>git tag</span>
+            </div>
+            <div>作用：
+                <span>列出所有tag</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git tag [tag]</span>
+            </div>
+            <div>作用：
+                <span>新建一个tag在当前commit</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git tag -d [tag]</span>
+            </div>
+            <div>作用：
+                <span>删除本地tag</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git push origin :refs/tags/[tagName]</span>
+            </div>
+            <div>作用：
+                <span>删除远程tag</span>
+            </div>
+            <div>注意：
+                <span>创建空tag并push到远端（即删除远端tag）</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git show [tag]</span>
+            </div>
+            <div>作用：
+                <span>查看tag信息</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git push [remote] [tag]</span>
+            </div>
+            <div>作用：
+                <span>提交指定tag</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git push [remote] --tags</span>
+            </div>
+            <div>作用：
+                <span>提交所有tag</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git checkout -b [branch] [tag]</span>
+            </div>
+            <div>作用：
+                <span>新建一个分支，指向某个tag</span>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="piece">
+        <li>GIT 查看</li>
+        <li>
+            <div>命令：
+                <span>git status</span>
+            </div>
+            <div>作用：
+                <span>命令可以列出当前目录所有还没有被git管理的文件和被git管理且被修改但还未提交(git commit)的文件</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git log</span>
+            </div>
+            <div>作用：
+                <span>显示当前分支的版本历史</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git log --stat</span>
+            </div>
+            <div>作用：
+                <span>显示commit历史，以及每次commit发生变更的文件</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git log -S [keyword]</span>
+            </div>
+            <div>作用：
+                <span>搜索提交历史，根据关键词</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git log [tag] HEAD --pretty=format:%s</span>
+            </div>
+            <div>作用：
+                <span>显示某个commit之后的所有变动，每个commit占据一行</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git log [tag] HEAD --grep feature</span>
+            </div>
+            <div>作用：
+                <span>显示某个commit之后的所有变动，其"提交说明"必须符合搜索条件</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git log --follow [file] <br> $ git whatchanged [file]</span>
+            </div>
+            <div>作用：
+                <span>显示某个文件的版本历史，包括文件改名</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git log -p [file]</span>
+            </div>
+            <div>作用：
+                <span>显示指定文件相关的每一次diff</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git log -5 --pretty --oneline</span>
+            </div>
+            <div>作用：
+                <span>显示过去5次提交</span>
+            </div>
+            <div>注意：
+                <span>5 可以换成其他数字</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git shortlog -sn</span>
+            </div>
+            <div>作用：
+                <span>显示所有提交过的用户，按提交次数排序</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git blame [file]</span>
+            </div>
+            <div>作用：
+                <span>显示指定文件是什么人在什么时间修改过</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git diff</span>
+            </div>
+            <div>作用：
+                <span>显示暂存区和工作区的差异</span>
+            </div>
+            <div>注意：
+                <span>常用</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git diff --cached [file]</span>
+            </div>
+            <div>作用：
+                <span>显示暂存区和上一个commit的差异</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git diff HEAD</span>
+            </div>
+            <div>作用：
+                <span>显示工作区与当前分支最新commit之间的差异</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git diff [first-branch]...[second-branch]</span>
+            </div>
+            <div>作用：
+                <span>显示两次提交之间的差异</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git diff --shortstat "@{0 day ago}"</span>
+            </div>
+            <div>作用：
+                <span>显示今天你写了多少行代码</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git show [commit]</span>
+            </div>
+            <div>作用：
+                <span> 显示某次提交的元数据和内容变化</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git show --name-only [commit]</span>
+            </div>
+            <div>作用：
+                <span>显示某次提交发生变化的文件</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git show [commit]:[filename]</span>
+            </div>
+            <div>作用：
+                <span>显示某次提交时，某个文件的内容</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git reflog</span>
+            </div>
+            <div>作用：
+                <span>显示当前分支的最近几次提交</span>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="piece">
+        <li>GIT 远端同步</li>
+        <li>
+            <div>命令：
+                <span>git fetch [remote]</span>
+            </div>
+            <div>作用：
+                <span>下载远程仓库的所有变动</span>
+            </div>
+        </li>
+	<li>
+            <div>命令：
+                <span>git fetch -p</span>
+            </div>
+            <div>作用：
+                <span>取回远程仓库的变化,且删除本地存在而在远端已删除的分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git remote -v</span>
+            </div>
+            <div>作用：
+                <span>显示所有远程仓库</span>
+            </div>
+            <div>注意：
+                <span>可以看到对远端仓库的权限（pull）（push）</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git remote show [remote]</span>
+            </div>
+            <div>作用：
+                <span>显示某个远程仓库的信息</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git remote add [shortname] [url]</span>
+            </div>
+            <div>作用：
+                <span>增加一个新的远程仓库，并命名</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git pull [remote] [branch]</span>
+            </div>
+            <div>作用：
+                <span>取回远程仓库的变化，并与本地分支合并</span>
+            </div>
+        </li>
+	<li>
+            <div>命令：
+                <span>git pull -p</span>
+            </div>
+            <div>作用：
+                <span>取回远程仓库的变化，并与本地分支合并,且删除本地存在而在远端已删除的分支</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git push [remote] [branch]</span>
+            </div>
+            <div>作用：
+                <span>上传本地指定分支到远程仓库</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git push [remote] --force</span>
+            </div>
+            <div>作用：
+                <span>强行推送当前分支到远程仓库，即使有冲突</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git push [remote] --all</span>
+            </div>
+            <div>作用：
+                <span>推送所有分支到远程仓库</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git push -f [remote] --all</span>
+            </div>
+            <div>作用：
+                <span>强制推送所有分支到远程仓库</span>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="piece">
+        <li>GIT 撤销（版本回退）</li>
+        <li>
+            <div>命令：
+                <span>git checkout [file]</span>
+            </div>
+            <div>作用：
+                <span>恢复暂存区的指定文件到工作区</span>
+            </div>
+            <div>注意：
+                <span>【常用】</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git checkout [commit] [file]</span>
+            </div>
+            <div>作用：
+                <span>恢复某个commit的指定文件到暂存区和工作区</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git checkout .</span>
+            </div>
+            <div>作用：
+                <span>恢复暂存区的所有文件到工作区</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git reset [file]</span>
+            </div>
+            <div>作用：
+                <span>重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git reset --hard</span>
+            </div>
+            <div>作用：
+                <span>重置暂存区与工作区，与上一次commit保持一致</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git reset [commit]</span>
+            </div>
+            <div>作用：
+                <span>重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git reset --hard [commit]</span>
+            </div>
+            <div>作用：
+                <span>重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git reset --keep [commit]</span>
+            </div>
+            <div>作用：
+                <span>重置当前HEAD为指定commit，但保持暂存区和工作区不变</span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git revert [commit]</span>
+            </div>
+            <div>作用：
+                <span>新建一个commit，用来撤销指定commit;后者的所有变化都将被前者抵消，并且应用到当前分支
+                </span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>git stash <br> git stash pop</span>
+            </div>
+            <div>作用：
+                <span>暂时将未提交的变化移除，稍后再移入</span>
+            </div>
+        </li>
+    </ul>
+    <ul class="piece">
+        <li>GIT 打包</li>
+        <li>
+            <div>命令：
+                <span>git archive</span>
+            </div>
+            <div>作用：
+                <span>生成一个可供发布的压缩包</span>
+            </div>
+        </li>
+    </ul>
+    <ul class="piece">
+        <li>GIT 问题解决</li>
+        <li>
+            <div>冲突解决：
+                <span>
+                    在合并分支时出现冲突后，首先将冲突文件手动解决，然后将解决后的文件添加到暂存区，
+                    然后commit，然后push到远端。
+                </span>
+            </div>
+            <div></div>
+            <div>注意：
+                <span>
+                    在push时可能会报错![rejected]，这是因为远端分支上又有了新的commit，此时需先执行
+                    git pull [remotename] [branchname]，然后再push。
+                </span>
+            </div>
+        </li>
+        <li>
+            <div>命令：
+                <span>
+                    git config http.postBuffer  524288000
+                </span>
+            </div>
+            <div>作用：
+                <span>
+                    修改git的传输字节限制。
+                </span>
+            </div>
+            <div>注意：
+                <span>
+                    在https协议下做push时有时会遇到报错为：
+                    <span style="color:red;">error: RPC failed; HTTP 411 curl 22 The requested URL returned error: 411 Length Required</span>
+                </span>
+            </div>
+        </li>
+    </ul>
+
+</body>
+</html>
