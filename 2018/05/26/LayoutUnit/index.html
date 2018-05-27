@@ -78,18 +78,18 @@
 
 
 
-<meta name="description" content="如果说把RWD和AWD比作网页布局树干的话，那这些单位便是枝叶了，只有很好的结合应用，才能将页面灵活起来。 先列举一下css中的长度单位:12345678910111213141516171819长度单位	版本	描述文本相对长度单位 Font-relative Length Unitsem	CSS1	相对于当前对象内文本的字体尺寸ex	CSS1	相对于字符“x”的高度。通常为字体高度的一半ch	C">
+<meta name="description" content="如果说把RWD和AWD比作网页布局树干的话，那这些单位便是枝叶了，只有很好的结合应用，才能将页面灵活起来。 先列举一下css中的长度单位:   长度单位 版本 描述      文本相对长度单位 Font-relative Length Units     em CSS1 相对于当前对象内文本的字体尺寸   ex CSS1 相对于字符“x”的高度。通常为字体高度的一半   ch CSS3 数字“0”">
 <meta name="keywords" content="前端,布局">
 <meta property="og:type" content="article">
 <meta property="og:title" content="布局中长度单位的灵活应用">
 <meta property="og:url" content="http://blog.thephenix.com/2018/05/26/LayoutUnit/index.html">
-<meta property="og:site_name" content="ZJ的智慧果树">
-<meta property="og:description" content="如果说把RWD和AWD比作网页布局树干的话，那这些单位便是枝叶了，只有很好的结合应用，才能将页面灵活起来。 先列举一下css中的长度单位:12345678910111213141516171819长度单位	版本	描述文本相对长度单位 Font-relative Length Unitsem	CSS1	相对于当前对象内文本的字体尺寸ex	CSS1	相对于字符“x”的高度。通常为字体高度的一半ch	C">
+<meta property="og:site_name" content="ZJ | 智慧果树">
+<meta property="og:description" content="如果说把RWD和AWD比作网页布局树干的话，那这些单位便是枝叶了，只有很好的结合应用，才能将页面灵活起来。 先列举一下css中的长度单位:   长度单位 版本 描述      文本相对长度单位 Font-relative Length Units     em CSS1 相对于当前对象内文本的字体尺寸   ex CSS1 相对于字符“x”的高度。通常为字体高度的一半   ch CSS3 数字“0”">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-26T15:16:42.616Z">
+<meta property="og:updated_time" content="2018-05-27T02:19:15.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="布局中长度单位的灵活应用">
-<meta name="twitter:description" content="如果说把RWD和AWD比作网页布局树干的话，那这些单位便是枝叶了，只有很好的结合应用，才能将页面灵活起来。 先列举一下css中的长度单位:12345678910111213141516171819长度单位	版本	描述文本相对长度单位 Font-relative Length Unitsem	CSS1	相对于当前对象内文本的字体尺寸ex	CSS1	相对于字符“x”的高度。通常为字体高度的一半ch	C">
+<meta name="twitter:description" content="如果说把RWD和AWD比作网页布局树干的话，那这些单位便是枝叶了，只有很好的结合应用，才能将页面灵活起来。 先列举一下css中的长度单位:   长度单位 版本 描述      文本相对长度单位 Font-relative Length Units     em CSS1 相对于当前对象内文本的字体尺寸   ex CSS1 相对于字符“x”的高度。通常为字体高度的一半   ch CSS3 数字“0”">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title>布局中长度单位的灵活应用 | ZJ的智慧果树</title>
+  <title>布局中长度单位的灵活应用 | ZJ | 智慧果树</title>
   
 
 
@@ -155,7 +155,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">ZJ的智慧果树</span>
+        <span class="site-title">ZJ | 智慧果树</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -305,7 +305,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZJ的智慧果树">
+      <meta itemprop="name" content="ZJ | 智慧果树">
     </span>
 
     
@@ -386,7 +386,107 @@
 
       
         <p>如果说把RWD和AWD比作网页布局树干的话，那这些单位便是枝叶了，只有很好的结合应用，才能将页面灵活起来。</p>
-<h1 id="先列举一下css中的长度单位"><a href="#先列举一下css中的长度单位" class="headerlink" title="先列举一下css中的长度单位:"></a>先列举一下css中的长度单位:</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">长度单位	版本	描述</span><br><span class="line">文本相对长度单位 Font-relative Length Units</span><br><span class="line">em	CSS1	相对于当前对象内文本的字体尺寸</span><br><span class="line">ex	CSS1	相对于字符“x”的高度。通常为字体高度的一半</span><br><span class="line">ch	CSS3	数字“0”的宽度</span><br><span class="line">rem	CSS3	相对于根元素(l元素)font-size计算值的倍数</span><br><span class="line">视口相对长度单位 Viewport-relative Length Units</span><br><span class="line">vw	CSS3	相对于视口的宽度。视口被均分为100单位的vw</span><br><span class="line">vh	CSS3	相对于视口的高度。视口被均分为100单位的vh</span><br><span class="line">vmax	CSS3	相对于视口的宽度或高度，总是相对于大的那个。视口的宽度或高度被均分为100单位的vmax</span><br><span class="line">vmin	CSS3	相对于视口的宽度或高度，总是相对于小的那个。视口的宽度或高度被均分为100单位的vmin</span><br><span class="line">绝对长度单位 Absolute Length Units</span><br><span class="line">cm	CSS1	厘米</span><br><span class="line">mm	CSS1	毫米</span><br><span class="line">q	CSS3	1/4毫米（quarter-millimeters）; 1q = 0.25mm</span><br><span class="line">in	CSS1	英寸（inches）; 1in = 2.54cm</span><br><span class="line">pt	CSS1	点（points）; 1pt = 1/72in</span><br><span class="line">pc	CSS1	派卡（picas）; 1pc = 12pt</span><br><span class="line">px	CSS1	像素（pixels）; 1px = 1/96in</span><br></pre></td></tr></table></figure>
+<h1 id="先列举一下css中的长度单位"><a href="#先列举一下css中的长度单位" class="headerlink" title="先列举一下css中的长度单位:"></a>先列举一下css中的长度单位:</h1><table>
+<thead>
+<tr>
+<th>长度单位</th>
+<th>版本</th>
+<th>描述 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文本相对长度单位 Font-relative Length Units</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>em</td>
+<td>CSS1</td>
+<td>相对于当前对象内文本的字体尺寸</td>
+</tr>
+<tr>
+<td>ex</td>
+<td>CSS1</td>
+<td>相对于字符“x”的高度。通常为字体高度的一半</td>
+</tr>
+<tr>
+<td>ch</td>
+<td>CSS3</td>
+<td>数字“0”的宽度</td>
+</tr>
+<tr>
+<td>rem</td>
+<td>CSS3</td>
+<td>相对于根元素(l元素)font-size计算值的倍数</td>
+</tr>
+<tr>
+<td>视口相对长度单位 Viewport-relative Length Units</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>vw</td>
+<td>CSS3</td>
+<td>相对于视口的宽度。视口被均分为100单位的vw</td>
+</tr>
+<tr>
+<td>vh</td>
+<td>CSS3</td>
+<td>相对于视口的高度。视口被均分为100单位的vh</td>
+</tr>
+<tr>
+<td>vmax</td>
+<td>CSS3</td>
+<td>相对于视口的宽度或高度，总是相对于大的那个。视口的宽度或高度被均分为100单位的vmax</td>
+</tr>
+<tr>
+<td>vmin</td>
+<td>CSS3</td>
+<td>相对于视口的宽度或高度，总是相对于小的那个。视口的宽度或高度被均分为100单位的vmin</td>
+</tr>
+<tr>
+<td>绝对长度单位 Absolute Length Units</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cm</td>
+<td>CSS1</td>
+<td>厘米</td>
+</tr>
+<tr>
+<td>mm</td>
+<td>CSS1</td>
+<td>毫米</td>
+</tr>
+<tr>
+<td>q</td>
+<td>CSS3</td>
+<td>1/4毫米（quarter-millimeters）; 1q = 0.25mm</td>
+</tr>
+<tr>
+<td>in</td>
+<td>CSS1</td>
+<td>英寸（inches）; 1in = 2.54cm</td>
+</tr>
+<tr>
+<td>pt</td>
+<td>CSS1</td>
+<td>点（points）; 1pt = 1/72in</td>
+</tr>
+<tr>
+<td>pc</td>
+<td>CSS1</td>
+<td>派卡（picas）; 1pc = 12pt</td>
+</tr>
+<tr>
+<td>px</td>
+<td>CSS1</td>
+<td>像素（pixels）; 1px = 1/96in</td>
+</tr>
+</tbody>
+</table>
 <h1 id="这里重点会说到px，-，em，rem，vh，vw等在布局中的应用场景"><a href="#这里重点会说到px，-，em，rem，vh，vw等在布局中的应用场景" class="headerlink" title="这里重点会说到px，%，em，rem，vh，vw等在布局中的应用场景"></a>这里重点会说到px，%，em，rem，vh，vw等在布局中的应用场景</h1><h1 id="PX："><a href="#PX：" class="headerlink" title="PX："></a>PX：</h1><p>在web开发中对绝对长度单位的应用一般都是PX，px其实为css的逻辑像素，针对移动端开发的同学还需要注意逻辑像素和物理像素在开发中的区别和开发受到的影响。</p>
 <h1 id="："><a href="#：" class="headerlink" title="%："></a>%：</h1><p>严格意义上讲%也能算作相对长度单位，相信大部分前端同学都会喜欢%来控制页面元素占位，%继承于父辈元素，可用于很多css属性，如：字体（font），尺寸（dimension），外补白（margin），内补白（padding），定位（position），变换tronsform等。前文响应式分类中的DEMO就用到了%，可回顾。</p>
 <h1 id="EM-REM"><a href="#EM-REM" class="headerlink" title="EM REM:"></a>EM REM:</h1><p>em，rem这两个单位需要放在一起比较，em是当前dom对象的字体尺寸，rem是根元素字体尺寸即root em；</p>
@@ -546,7 +646,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -568,7 +668,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
