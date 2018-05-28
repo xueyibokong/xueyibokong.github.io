@@ -41,6 +41,7 @@ type:
 >`date`  时间
 >`tags`  文章标签
 >`type`  文章类型
+```
 #### Run server [查看效果]
 ```
 $ hexo server
