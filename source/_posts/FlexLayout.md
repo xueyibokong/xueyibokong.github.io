@@ -34,7 +34,8 @@ display: flex;
 <center>flex属性图</center>
 
 # flex属性工具
-你可以通过这个[demo](../../../../html/Flexbox.html)来测试flexbox的每一个属性从而更加方便的记忆理解。
+你可以通过这个[demo](../../../../html/Flexbox.html)或者[codepan demo](https://codepen.io/xueyibokong/pen/Nzryre)来测试flexbox的每一个属性从而更加方便的记忆理解。
+
 另外，可以试试这个[FlexboxFroggy](http://flexboxfroggy.com/#zh-cn)。
 
 请用支持vh,vw的浏览器调试，在测试属性时候请结合着调节浏览器窗口size。
