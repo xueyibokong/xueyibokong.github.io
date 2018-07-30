@@ -1,10 +1,10 @@
 ---
 title: 前端面试题
 date: 2018-05-25 10:30:12
-tags: 
+tags:
 	- 前端知识点
 	- 整理
-categories: 
+categories:
 	- 技术
 password : ZJ9527
 ---
@@ -50,7 +50,7 @@ password : ZJ9527
     .mask{
         width:100%;
         height:100%;
-        text-align: center        
+        text-align: center
     }
     .mask:after{
         content:"";
@@ -78,7 +78,7 @@ password : ZJ9527
         flex: 1;
         max-width: 80%;
 
-    }	
+    }
 ```
 #### 进阶要求答案
 ```
@@ -91,7 +91,7 @@ password : ZJ9527
 	}
 ```
 
-`自适应布局` 要求：左边固定宽，右边自适应。以上要求有js参与。
+`自适应布局` 要求：左边固定宽，右边自适应。要求不得有js参与。
 #### dom
 ```
 	<div class="box">
@@ -233,16 +233,16 @@ password : ZJ9527
 		  border:1px solid red;
 		  margin-top:30px;
 		}
-		
+
 	IFC (inline formatting context)是web布局的内联元素格式化上下文。
 		IFC用来包裹内联元素，其高度为内联元素最高所决定，给IFC设置text-align:center;
 	会使其内部元素水平居中。
 		把IFC中最高元素基线设置为vertical-align:middle能使IFC内部元素垂直居中。
-	
+
 	GFC (GridLayout Formatting Contexts) 网格布局格式化上下文 display:grid
-	
+
 	FFC (Flex Formatting Contexts)自适应格式化上下文 display:flex
-		
+
 ```
 ### 用dom节点绘制一个微信logo
 `css 绘制icon`
@@ -255,7 +255,7 @@ password : ZJ9527
 	    <span></span>
 	  </div>
 	</div>
-	
+
 	.wx-logo{
 	  font-size:20px;
 	  width:10em;
@@ -345,7 +345,7 @@ password : ZJ9527
 	转换为数值类型：Number(mix)、parseInt(string,radix)、parseFloat(string)
 	转换为字符串类型：toString(radix)、String(mix)
 	转换为布尔类型：Boolean(mix)
-	
+
 	Boolean('') //false
 	Boolean(0);	//false
 	Boolean(NaN); //false
@@ -354,10 +354,10 @@ password : ZJ9527
 	Boolean([])	//true
 	Boolean([].valueOf())//true
 	Boolean([].toString()) //false
-	
+
 	隐式转换：
 	++ -- - / * - 逻辑运算符 关系操作符（==）
-	
+
 	[] == []
 	//false
 	false == []
@@ -375,7 +375,7 @@ password : ZJ9527
 	1、JSON.stringify()/JSON.parse();
 	2、对于一位json可以有现成的api比如array的slice、concat等，凡是可以生成新json的api都可以。
 	3、对多维json进行遍历加递归，判断条件为基本数据类型后结束递归并赋值。
-	
+
 	`应用`
 	深拷贝和浅拷贝在开发中需应用得当。
 	浅拷贝可以节省内存开销，并使一组数据在多端程序操作后保持同步，函数传参常用。
@@ -388,7 +388,7 @@ password : ZJ9527
 	console.log(this === window)//true
 	`node`
 	console.log(this === global)//true
-	
+
 	this指的是，调用函数的那个对象。
 	call、apply会改变this的指向
 ```
@@ -440,7 +440,7 @@ password : ZJ9527
 		this.obj = {"a":"aa"}
 	}
 	_A.prototype.arr = [1,2,3];
-	
+
 	var A = new _A();
 	var B = new _A();
 	A.arr;//[1,2,3]
@@ -451,7 +451,7 @@ password : ZJ9527
 ![](https://pic1.zhimg.com/e83bca5f1d1e6bf359d1f75727968c11_r.jpg)
 ```
 	`关系如上图：`
-	
+
 	`范式如下：`
 	function _a(){
 		this.name = 'a'
@@ -469,13 +469,13 @@ password : ZJ9527
 	_b.prototype = new _a()
 	_b.prototype.constructor = _b;
 	var b = new _b();
-	b.getNum();//[1,2,3]	 
+	b.getNum();//[1,2,3]
 	b.getName();//'b' 注意：对象读取属性依据继承链向上读取
-	
+
 	`__ptoto__`
 	1.对象有属性__proto__,指向该对象的构造函数的原型对象。
 	2.方法除了有属性__proto__,还有属性prototype，prototype指向该方法的原型对象。
-	
+
 	`用途`
 	实现继承的主要方法
 	常用于以基类、二级类、...方式开发js工具库、游戏。
@@ -493,7 +493,7 @@ password : ZJ9527
 	add()//1
 	add()//2
 	add()//3
-	
+
 	注解：将‘addFn’执行后赋值给’add‘字面量，‘add’接收到返回的‘_’,'_'内部引用‘addFn’作用域中的变量，由于’add‘未销毁，所以'_'与‘addFn’的上下文关系就未被销毁。add()便是‘addFn’作用域里的‘z’，实现了内部变量外部访问
 ```
 ### 动画
@@ -504,7 +504,7 @@ password : ZJ9527
 	requestAmationFrame（js帧绘画）实现方式是递归执行
 ```
 ### 什么是动画队列？动画队列有哪些方式？
-`动画题` 
+`动画题`
 ```
 	 `jquery`
 	 $('#box').animate({'left':'100px'},1000).animate({'width':'200px'},1000).animate({'left':'0'},1000).animate({'width':'100px'},1000);
@@ -539,7 +539,7 @@ password : ZJ9527
 ```
 	methods : get、post、put、option、delete...
 	状态码 : 200（正常）、300（重定向）、400（客户端错误）、500（服务端错误）
-	http是无状态、结合cookie和session描述http会话过程： Session是怎样做到会话身份识别的呢？首先，用户端向服务端发送一个请求，服务端接收到请求后，初始化会话，生成相应的会话信息，核心是会话ID，把会话ID发送给客户端，客户端接收到这个会话ID，把它存储起来，下一次发送请求的时候，附带着这个会话ID一起发送给服务端，服务端只要根据这个会话ID，就知道是谁了。这个会话ID，就像我们的身份证号码，一直伴随终生。核心：服务端如何生成这个会话ID，客户端怎样存储这个会话ID。 
+	http是无状态、结合cookie和session描述http会话过程： Session是怎样做到会话身份识别的呢？首先，用户端向服务端发送一个请求，服务端接收到请求后，初始化会话，生成相应的会话信息，核心是会话ID，把会话ID发送给客户端，客户端接收到这个会话ID，把它存储起来，下一次发送请求的时候，附带着这个会话ID一起发送给服务端，服务端只要根据这个会话ID，就知道是谁了。这个会话ID，就像我们的身份证号码，一直伴随终生。核心：服务端如何生成这个会话ID，客户端怎样存储这个会话ID。
 ```
 `ajax 上送数据格式`
 ```
@@ -551,14 +551,14 @@ password : ZJ9527
 ```
 	`跨域的由来`
 	跨域是浏览器对不同域名下的站点间脚本数据交互的保护措施，具体表现在ajax脚本对不同域名下的服务发出的数据请求和不同站点间的通信会被跨域拦截。
-	
+
 	`jsonp 解决一级域跨域`：原理，简单实现
 	原理是客户端创建script标签src请求服务端返回的一个js文件，在这个js文件中上面是要返回的json数据，下面是一个callback函数的执行并将上面的数据作为实参回传，callback函数名在客户端请求时一query string方式上传。客户端在这个js文件加载成功后编写回调具名函数，函数名为上面提到的callback。
 	`cors 解决一级域跨域`: 原理，实现。
 	ajax发起后requestHeader设置withCredentials和crossDomain为true，表明ajax要发起跨域请求了，在服务端返回的responseHeader中需要设置ajax脚本执行所在域的域名为信任站点，即设置res.header("Access-Control-Allow-Origin",req.headers.origin);
 	`服务器代理 解决一级域跨域`
 	由于跨域是浏览器对ajax做的限制，因此服务端请求服务端的数据是不存在跨域的，所以用同域下的服务求代理客户端去请求跨域的服务数据是可以的。
-	
+
 	`二级域名跨域`
 	开发中时长遇到二级域名跨域的场景，比如：iframe间通信，cookie跨域共享等，这些场景多数可以通过document.domain和服务端设置cookie的cross来解决。
 ```
@@ -602,7 +602,7 @@ password : ZJ9527
 			console.log(3)
 		}
 	}
-	
+
 	执行结果 ：
 	1
 	3
@@ -667,7 +667,7 @@ div+css、svg、webgl(canvas 2D、3D)
 ### 组件动手题
 ```
 	(function(){
-		
+
 	})()
 ```
 
