@@ -2,11 +2,10 @@
 title: 全栈之路-前后端交互数据格式分析及选用
 date: 2018-07-31
 tags: 
-    - 全栈
+    - 服务端
     - http
 categories: 
-    - 全栈技术
-password : ZJ9527
+    - 全栈之路
 ---
 
 # 预备知识 

@@ -2,11 +2,9 @@
 title: 全栈之路-起跑
 date: 2018-07-31
 tags: 
-    - 全栈
-    - http
+    - 说明
 categories: 
-    - 全栈技术
-password : ZJ9527
+    - 全栈之路
 ---
 
 > 从今天开始记录全栈开发经历
