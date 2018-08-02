@@ -19,14 +19,14 @@ password : ZJ9527
 
 > MediaType，即是Internet Media Type，互联网媒体类型；也叫做MIME类型，在Http协议消息头中，使用Content-Type来表示具体请求或响应中实体主体的媒体类型信息。
 
+分析：
+
 ```
 application/x-www-form-urlencoded;charset=UTF-8
 [主类型]    /      [子类型]        ;     参数
 ```
 
->eg:
->
->[Content-type对照表](http://tool.oschina.net/commons)
+eg:
 
 - ​    text/html ： HTML格式
 - ​    text/plain ：纯文本格式      
@@ -60,6 +60,8 @@ application/x-www-form-urlencoded;charset=UTF-8
   `服务端设置下载`
 
 - application/force-download
+
+[Content-type对照表](http://tool.oschina.net/commons)
 
 ## fetch、ajax选择
 
@@ -126,7 +128,7 @@ fetch('http://localhost:5757/register1',{
 
 > 此值，可以将json字符串作为实体进行传输。
 
-# 选什么？
+# 有什么不同？
 
 > 下面是一个实验流程。服务端选用koa-body转码请求实体。
 
@@ -221,8 +223,8 @@ const body = require('koa-body');
 app.use(body({
     multipart : true, //支持multipart-formdate表单数据解析
     formidable : {
-        uploadDir : path.join(__dirname,'./public/imgs'),
-        keepExtensions : true,
+        uploadDir : path.join(__dirname,'./public/imgs'), //指定上传后的目录
+        keepExtensions : true,//保留原来的文件后缀
         maxFieldsSize : 2 * 1024 * 1024
     }
 }));
@@ -293,6 +295,10 @@ res body=====> { text: 'adsfasdf' }
 
 > 可以看出文件会被`koa-body`注入到`ctx.request.files`中,其他form数据被`koa-body`注入到`ctx.request.body`中。
 
+![](https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/%E5%85%A8%E6%A0%88%E4%B9%8B%E8%B7%AF/httpdata/12.png)
+
+> 可以看出文件已经被上传到指定目录下。
+
 __`场景4`multipart/form-data方式，多维数据。【不可行】__
 
 > 因为此方式只适用于表单媒体数据的键值关系，所以不能表达多维数据。
@@ -352,7 +358,20 @@ fetch('http://localhost:5757/register1',{
 
 ![](https://raw.githubusercontent.com/xueyibokong/BlogImages/master/res/%E5%85%A8%E6%A0%88%E4%B9%8B%E8%B7%AF/httpdata/11.png)
 
-## 总结
+# 选什么？
 
+> 1、通常站点内不会采用`query string`的方式前后端交互，除非一些特殊情况，如果是那样，只需要在特定的Controler中支持就行。
+>
+> 2、【推荐】选用`Request Payload`方式进行前后端数据交互，需要上传文件时可以选用`multipart/form-data`方式.
+>
+> 3、上传文件也可以通过json字符串携带文件的base64值的方式，这样就可以实现json单一格式的交互方式，只不过`koa-body`没有针对json中base64的读写操作，需要服务端自己开发读写逻辑。
 
+# 结论
 
+> 针对于现有选型，定位为：
+>
+> json字符串做基本数据交互格式；
+>
+> `multipart/form-data`做文件上传交互方式；
+>
+> 服务端从rtx.request.body / rtx.request.files中获取这些数据。
