@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="ZJ | 智慧果树">
 <meta property="og:description" content="前言react-router经过很多版本更新，目前是v4版本，坑源自于不同版本的api文档不规范，本文记录react-router-domV4在项目中的使用。 React Router文档，V2/V3到V4的迁移指南  Router.jsx  1234567891011121314151617181920import React,&amp;#123;Component&amp;#125; from &quot;react&quot;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-02T09:49:24.443Z">
+<meta property="og:updated_time" content="2018-08-30T07:37:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react-router踩坑">
 <meta name="twitter:description" content="前言react-router经过很多版本更新，目前是v4版本，坑源自于不同版本的api文档不规范，本文记录react-router-domV4在项目中的使用。 React Router文档，V2/V3到V4的迁移指南  Router.jsx  1234567891011121314151617181920import React,&amp;#123;Component&amp;#125; from &quot;react&quot;">
@@ -395,7 +395,13 @@
 <p>App.js</p>
 </blockquote>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'./App.css'</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">          &#123;<span class="comment">/* 路由外的部分 */</span>&#125;  </span><br><span class="line">          &lt;header&gt;</span><br><span class="line">              公共头部</span><br><span class="line">          &lt;<span class="regexp">/header&gt;</span></span><br><span class="line"><span class="regexp">          &#123;/</span>* 路由嵌套 *<span class="regexp">/&#125;</span></span><br><span class="line"><span class="regexp">          &#123;this.props.children&#125;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
-<h3 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…"></a>未完待续…</h3><p>原文=&gt; <a href="http://blog.thephenix.com/2018/07/31/FSRreactRouter/">http://blog.thephenix.com/2018/07/31/FSRreactRouter/</a> 【请尊重版权】</p>
+<blockquote>
+<p>脚本跳转</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.props.history.push(PATH)</span><br></pre></td></tr></table></figure>
+<blockquote>
+</blockquote>
+<p>原文=&gt; <a href="http://blog.thephenix.com/2018/07/31/FSRreactRouter/">http://blog.thephenix.com/2018/07/31/FSRreactRouter/</a> 【请尊重版权】</p>
 
       
     </div>
@@ -438,8 +444,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/31/FSRconnectDB/" rel="prev" title="全栈之路-koa + sequelize=>ORM">
-                全栈之路-koa + sequelize=>ORM <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/31/FSR-start/" rel="prev" title="全栈之路-起跑">
+                全栈之路-起跑 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -547,7 +553,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -618,7 +624,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续…"><span class="nav-number">1.0.1.</span> <span class="nav-text">未完待续…</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></div>
             
 
           </div>
@@ -638,7 +644,7 @@ var jiathis_config={
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
