@@ -39,3 +39,5 @@ display: flex;
 另外，可以试试这个[FlexboxFroggy](http://flexboxfroggy.com/#zh-cn)。
 
 请用支持vh,vw的浏览器调试，在测试属性时候请结合着调节浏览器窗口size。
+
+参考：https://css-tricks.com/snippets/css/a-guide-to-flexbox/

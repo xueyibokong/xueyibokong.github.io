@@ -62,4 +62,10 @@ class App extends Component {
 export default App;
 ```
 
-### 未完待续...
+> 脚本跳转
+
+```javascript
+this.props.history.push(PATH)
+```
+
+> 
